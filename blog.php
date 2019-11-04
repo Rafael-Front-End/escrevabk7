@@ -3,14 +3,58 @@
 Template Name: Blog
 */
  
-get_header(); 
+
+get_header();
+while ( have_posts() ) : the_post();
+
+    if ( has_post_thumbnail() ) {
+        $the_post_thumbnail = get_the_post_thumbnail_url();
+    } else { 
+        $the_post_thumbnail = "";
+    }  
+
+    setPostViews(get_the_ID());
+    $Categoria = get_the_category(); 
+    $Nome_categoria = $Categoria[0] -> cat_name;
+    $Id_categoria = $Categoria[0] -> cat_ID;
+    $Id_categoria1 = $Categoria[1] -> cat_ID;
+    $link_categoria = get_category_link($Id_categoria); 
+    $autor   = get_the_author();
+    $autor_link = get_author_posts_url(get_the_author_meta( 'ID' ), get_the_author_meta( 'user_nicename' ));
+    $contador_img_galeria = 0;
+    $id_post = get_the_ID();
+    $views = getPostViews($id_post);
+    $img   = $the_post_thumbnail; 
+    $tipo_media = get_post_meta($id_post, "meta-box-tipo-featured_media", true);
+    $url_media = get_post_meta($id_post, "meta-box-url-featured_media", true);
+
+    if($url_media != NULL){
+        if($tipo_media == 1){
+            $featured_video = "<iframe src=\"{$url_media}\" allowfullscreen width=\"100%\" height=\"380\" frameborder=\"0\"></iframe>";
+        }else if($tipo_media == 2){
+            $featured_audio = "
+                <audio id='media_post' controls>
+                    <source src=\"{$url_media}\" type=\"audio/mpeg\">
+                </audio>
+            ";
+        }
+    }
  
-    echo '<header id="pagina_cabecalho"><div class="container"><div class="col-md-12">';
-        the_title( '<h1 id="titulo_pagina">', '</h1>' );
-    echo '</div></div></header>';
-?> 
-<main id="pagina_categoria" class="site-main container" role="main">
-        <div class="tipo_3 destaque_categorias">
+?>
+    <header id="pagina_cabecalho" style="background-color: #f47d3a;"  class="page_width">
+        <div class="col-md-12">
+            <span class="meta-category"><a href="<?php echo $link_categoria;?>" class="category-2"><?php echo ($Id_categoria != 1 ? strtolower($Nome_categoria) : ''); ?></a></span>
+            <?php  
+                the_title( '<h1 id="titulo_pagina">', '</h1>' );
+                echo '<h4>'.get_nskw_subtitle().'</h4>';
+               
+            ?>
+        </div>
+
+    </header>
+    <div class="clearfix"></div>
+<main id="pagina_blog" class="site-main container" role="main">
+        <div class="tipo_3 col-md-8">
             <?php 
             // Check if there are any posts to display
             $wpb_all_query = new WP_Query(array(
@@ -49,14 +93,17 @@ get_header();
               
               
                         $html_categoria_cultura .='
-                        <a href="'.$url.'" class="bloco_categoria col-md-6" style="background-image: url('.$img.');">
-                                <div class="content-post">
-                                  <h3>'.$titulo.'</h3>
-                                  <p>'.$resumo.'...</p>
-                                  <p>'.$autor.' <span>- '.$data_post.'</span></p>
-                                </div>
-                            </a>
-                          ';
+                <div class="tipo_1   destaque_categorias">
+                    '.($contador == 1 ? '' : '<h3></h3>').'
+                        <div class="bloco_post">
+                          <a href="'.$url.'"  class="thumbnail_post" style="background-image:url('.$img.');"></a>
+                            <div class="content_post">
+                              <p>Data da publicação: <span>'.$data_post.' </span></p>
+                              <a href="'.$url.'" ><h4>'.$titulo.'</h4></a>
+                            </div>
+                        </div>
+                </div>
+                    ';
              endwhile; 
              echo $html_categoria_cultura;
 
@@ -73,6 +120,10 @@ get_header();
             <?php endif; ?>
 
         </div>
-</main>
- 
-<?php get_footer(); ?>
+        <?php get_sidebar(); ?>
+    </main><!-- #main -->
+
+<?php 
+endwhile;
+get_footer();
+?>

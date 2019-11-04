@@ -67,7 +67,7 @@ while ( have_posts() ) : the_post();
 
                     </div>
                     <div class="col-md-6"><strong style="float:left; width:100%;">Obrigado por se inscrever</strong>
-                    <p style="float:left; max-width:200px;">Continue navegando pelo site para mais informações sobre o nosso curso e para ter acesso aos nossos artigos informativos</p>
+                    <p style="float:left; max-width:200px;">Continue navegando pelo site para mais informações sobre nosso curso e ter acesso a artigos informativos</p>
 
                     </div>
                     <?php  the_content(); ?>

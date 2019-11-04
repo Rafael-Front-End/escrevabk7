@@ -3,6 +3,29 @@ h2{
 }
 
 
+#menu_topo #menu_3 {
+    margin-right: 26px;
+}
+
+footer#rodape .copyright > div.container > div {
+    float: left;
+    width: 33.33%;
+    margin-top: 6px;
+    margin-left: 20px;
+}
+
+main {
+  padding-bottom: 80px;
+
+}
+#pagina_blog  .bloco_post > .content_post {
+    float: left;
+    width: 50%;
+    padding-left: 15px;
+    text-align: left;
+}
+
+
 .wpcf7 form.sent{
   display: none;
 }
@@ -15,6 +38,9 @@ h2{
      filter: grayscale(100%);
 }
 
+#pagina_portfolio #portfolio .photo {
+    padding: 0;
+}
 
 #portfolio .photo:hover{
       -webkit-transition: 500ms -webkit-filter linear;
@@ -66,15 +92,18 @@ h2{
 }
 
 
-.botaoazul{
-	padding: 8px;
-	border-radius: 20px;
-	background: #20cceb;
-	float: left;
-	margin-left:6px;
-	color:#000 !important;
-	float: right;
+.botaoazul {
+    padding: 8px 20px;
+    border-radius: 20px;
+    background: #20cceb;
+    float: left;
+    margin-left: 6px;
+    color: #000 !important;
+    text-decoration: none;
+    font-family: Arial Bold;
+    float: right;
 }
+
 
 #menu_3 li > a {
 	padding: 8px 14px;
@@ -155,6 +184,12 @@ h2{
 	text-align: right !important;
 }
 
+input[type=submit]:hover{
+  background: none;
+  color:#000;
+}
+
+input[type=submit],
 .destaque_categorias .todososposts,
 .lado-texto a{
 	border: 3px solid #000;
@@ -233,6 +268,9 @@ h2{
 	float:left;
 	width: 33%
 }
+
+
+
 
 .fundoddepoimento{
   float: left;
@@ -431,13 +469,20 @@ header#pagina_cabecalho.page_width {
 
 /*=====================================*/
 
+
+
+
 .testimonial{
   background: rgb(255,255,255, 0.8);
   border-radius: 5px;
   padding: 0 !important;
-  width: 28% !important;
+  width: 40% !important;
   margin: 0 40px 40px 0 !important;
   float: left !important;
+}
+
+.fundoddepoimento .testimonial{
+  width: 28% !important;
 }
 
 .testimonial-image{
@@ -447,8 +492,11 @@ header#pagina_cabecalho.page_width {
     height: 70px;
 }
 
+.testimonial h3,
+h3.testimonial-heading a,
 h3.testimonial-heading{
-  font:Bold 16px Arial Bold;
+  font:Bold 16px Arial Bold !important;
+  color:#424241 !important;
 }
 
 .testimonial p {
@@ -574,6 +622,7 @@ footer ul li::before {
   margin-left: -1em; /* Also needed for space (tweak if needed) */
   font-size: 0.8em;
 }
+
 
 
 
