@@ -19,7 +19,8 @@ class ZflagGaleriaHome extends WP_Widget
         if(get_option('tema_zflag_galeria_home')){
           $tema_zflag_galeria_home = json_decode(get_option('tema_zflag_galeria_home'));
           $tema_zflag_galeria_home = (array) $tema_zflag_galeria_home;
-           
+           $blocov = NULL;
+           $cont = 0;
           foreach ($tema_zflag_galeria_home as $key => $value) {
             $vetor_galeria_home  = (array) $value;
             $titulo = $vetor_galeria_home['titulo'];
@@ -38,15 +39,38 @@ class ZflagGaleriaHome extends WP_Widget
                 $thumbnail   =   wp_get_attachment_image_src(intval($value), 'medium');
                 $img         =   wp_get_attachment_url($value);
                 
-               
+
+                if($cont == 0){
+
+                  $blocov = '<div class="blocove azul">
+                              <img src="'.get_bloginfo( 'template_directory' ).'/imagens/icons/iconportfolio1.png">
+                              <h3>Debate de temas atuais</h3>
+                              <p>A partir do conhecimento e do debate de temas atuais, o aluno se tornará capaz de argumentar de maneira aprofundada e eficiente.</p>
+                          </div>';
+                }else  if($cont == 1){
+                    $blocov = '<div class="blocove rochoo">
+                              <img src="'.get_bloginfo( 'template_directory' ).'/imagens/icons/icone2.png">
+                              <h3>Grupos de até 15 alunos</h3>
+                              <p>O trabalho em grupos pequenos, com até 15 alunos, torna as aulas personalizadas fugindo dos modelos ou fórmulas “prontas”.</p>
+                          </div>';
+                }else  {
+                    $blocov = '<div class="blocove vermelho">
+                              <img src="'.get_bloginfo( 'template_directory' ).'/imagens/icons/iconportfolio3.png">
+                              <h3>Ambiente aconchegante</h3>
+                              <p>Ambiente confortável, que propicia condições ideais para serenidade do aprendizado.</p>
+                          </div>';
+                }
+
+
+                $cont++;
+
                 $html_galeria_home .='
                   <!-- single-awesome-project start -->
                     <div class="photo '.$slug.'">
                       <div class="single-awesome-project">
                         <div class="awesome-img">
-                          
+                          '.$blocov .'
                           <img width="100%" height="auto" src="'.$thumbnail[0].'" alt="" />
-                          
                         </div>
                       </div>
                     </div>

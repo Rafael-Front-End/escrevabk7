@@ -8,19 +8,45 @@ h2{
 .blocove p{
   font-size: 16px;
 }
+.blocove.rochoo{
+  background: #763496;
+}
+
+.blocove.vermelho{
+  background: #da374a;
+}
+
 .blocove{
   padding: 40px 60px;
   text-align: center;
   color:#fff !important;
-  position: relative;
-  display: none;
-  top:0;
   letter-spacing: -1px;
   z-index: 10px;
+  position: absolute;
+  top: 0%;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    opacity: 0;
+}
+
+.awesome-img:hover .blocove{
+      transition: opacity .5s linear;
+    -moz-transition: opacity .5s linear;
+    -webkit-transition: opacity .5s linear;
+    -ms-transition: opacity .5s linear;
+    -o-transition: opacity .5s linear;
+    opacity: 1;
 }
 
 .blocove.azul{
   background: #316bc2;
+}
+
+.awesome-img{
+    display: inline-block;
+    position: relative;
+    width: 100%;
 }
 
 
@@ -303,15 +329,16 @@ input[type=submit],
 }
 
 
-
-
-.fundoddepoimento{
-  float: left;
-  width: 100%;
-  padding:50px 0;
-  height: 1053px;
-  background-image: url("../imagens/logos/fundoimagemdepoimento.jpg");
+.fundoddepoimento {
+    float: left;
+    width: 100%;
+    padding: 50px 0;
+    background-size: auto 100%;
+    min-height: 1273px;
+    height: 1053px;
+    background-image: url(../imagens/logos/fundoimagemdepoimento.jpg);
 }
+
 
 .fundoddepoimento .wp-video{
   text-align: center;

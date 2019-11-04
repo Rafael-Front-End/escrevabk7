@@ -27,8 +27,8 @@
             <div class="col-md-4">  
             </div>
             <div class="col-md-8">
-              <a class="botaoazul rocho" href=''>Redação para Ensino Fundamental</a>
-              <a class="botaoazul" href=''>Redação para Vestibulares</a>
+              <a class="botaoazul rocho" href='http://testes.zflag.net/redacao-para-ensino-fundamental/'>Redação para Ensino Fundamental</a>
+              <a class="botaoazul" href='http://testes.zflag.net/redacao-para-vestibulares/'>Redação para Vestibulares</a>
               <ul >
                 <li><i class="fa fas fa-phone-alt"></i><span>21 99698-5031</span></li>
                 <li><a href='https://www.facebook.com/cursoescreva'><i class="fa fab fa-facebook-square"></i></a></li>
