@@ -2,6 +2,27 @@ h2{
   font:Bold 27px Montserrat Bold;
 }
 
+.blocove h3{
+  color: #fff !important;
+}
+.blocove p{
+  font-size: 16px;
+}
+.blocove{
+  padding: 40px 60px;
+  text-align: center;
+  color:#fff !important;
+  position: relative;
+  display: none;
+  top:0;
+  letter-spacing: -1px;
+  z-index: 10px;
+}
+
+.blocove.azul{
+  background: #316bc2;
+}
+
 
 #menu_topo #menu_3 {
     margin-right: 26px;
@@ -35,6 +56,9 @@ main {
     float: left;
     padding-right: 15px;
     padding-bottom: 15px;
+}
+
+.conteudo_post #portfolio .photo {
      filter: grayscale(100%);
 }
 
@@ -42,7 +66,7 @@ main {
     padding: 0;
 }
 
-#portfolio .photo:hover{
+.conteudo_post #portfolio .photo:hover{
       -webkit-transition: 500ms -webkit-filter linear;
       -moz-transition: 500ms -moz-filter linear;
       -moz-transition: 500ms filter linear;
@@ -60,7 +84,7 @@ main {
 
 #social_icons_top{
 	font-size:11px;
-	font-family: 'Arial Bold', Arial;
+	font-family: Arial Bold, Arial;
 	font-weight: Bold;
 	width: 100%;
 	background: #000;
@@ -93,22 +117,28 @@ main {
 
 
 .botaoazul {
-    padding: 8px 20px;
-    border-radius: 20px;
-    background: #20cceb;
-    float: left;
-    margin-left: 6px;
-    color: #000 !important;
-    text-decoration: none;
-    font-family: Arial Bold;
-    float: right;
+  padding: 8px 20px;
+  border-radius: 20px;
+  background: #20cceb;
+  float: left;
+  margin-left: 6px;
+  color: #000 !important;
+  text-decoration: none !important;
+  font-family: Arial Bold;
+  float: right;
 }
+
+
+.rocho{
+  background:#bc84d7 !important;
+}
+
 
 
 #menu_3 li > a {
 	padding: 8px 14px;
     color: #000;
-    font-family: 'Arial Bold', Arial !important;
+    font-family: Arial Bold, Arial !important;
     font-size: 11px;
     font-style: normal;
     font-weight: Bold;
@@ -120,10 +150,13 @@ main {
 
 
 #menu_3 li > a:hover {
+   color: #f98644;
+}
 
+.prematricula {
     background: #f98644;
     border-radius: 20px;
-    color: #fff;
+    color: #fff !important;
 }
 
 #menu_3{
@@ -207,17 +240,17 @@ input[type=submit],
 }
 
 .lado-texto h1 {
-    font-size: 38px !important;
-    color: #000;
-    font-family: Montserrat Bold;
-    line-height: 37px !important;
-    letter-spacing: -2px;
-    font-weight: bold;
-    margin-top: 20px;
+  font-size: 54px !important;
+  color: #000;
+  font-family: Montserrat Bold !important;
+  line-height: 53px !important;
+  letter-spacing: -3px;
+  font-weight: bold;
+  margin-top: 20px;
 }
 
 .lado-texto{
-  width: 50%;
+  width: 46%;
   float:left;
   padding: 20px;
 }

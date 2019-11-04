@@ -6,8 +6,36 @@ $(window).load(function() {
 });
  
 $(function(){ 
+ 
+
+	// $(".photo img").hover(
+	// 	alert('over');
+	// 	function(){
+	// 	  $(this).find('.blocove').stop().animate({
+	// 	     width: 50%
+	// 	  },'slow');
+	// 	},
+	// 	function() {
+	// 	  $(this).find('.blocove').stop().animate({
+	// 	     width: 0
+	// 	  },'slow');
+	// });
 
 
+	// $('.awesome-img').hover(function(){
+	// 	var bloco = $(this).find('.blocove');
+
+	// 	if($(bloco).is(':hidden'))
+	//     {
+	//       $(bloco).show().stop().animate({top:'0%'},800);
+	//     }else{
+	//       $(bloco).stop().animate({top:'100%'}, 800).hide();
+	//     }
+	// });
+
+
+	// $('.blocove').('height', $('.photo').height());
+	// $('.blocove').('width', $('.photo').width());
 	    /*---------------------
     Venobox
   --------------------- */

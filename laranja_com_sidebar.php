@@ -11,7 +11,7 @@ while ( have_posts() ) : the_post();
     } else { 
         $the_post_thumbnail = "";
     }  
-
+ 
     setPostViews(get_the_ID());
     $Categoria = get_the_category(); 
     $Nome_categoria = $Categoria[0] -> cat_name;
@@ -77,14 +77,7 @@ while ( have_posts() ) : the_post();
                 <div id='inner_post_widget'> <?php dynamic_sidebar('inner_post_widget'); ?></div>
  
             </section>
-            <section id="comenarios">
-                <?php
-                    // If comments are open or we have at least one comment, load up the comment template.
-                    if ( comments_open() || get_comments_number() ) :
-                        comments_template();
-                    endif;
-                ?> 
-            </section>
+            
         </div>
         <?php get_sidebar(); ?>
     </main><!-- #main -->

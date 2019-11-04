@@ -10,7 +10,11 @@
 
     foreach ($itens_menu_3 as $key => $value) {
       $value = (array) $value;
-      $html_li_menu_3 .= "<li><a href=\"".$value['url']."\"><span>".$value['title']."</span></a></li>";
+      if($value['title'] == 'Pré-matrícula'){
+        $html_li_menu_3 .= "<li><a class='prematricula' href=\"".$value['url']."\"><span>".$value['title']."</span></a></li>";
+      }else{
+        $html_li_menu_3 .= "<li><a href=\"".$value['url']."\"><span>".$value['title']."</span></a></li>";
+      }
     }
 
   ?>
@@ -23,8 +27,8 @@
             <div class="col-md-4">  
             </div>
             <div class="col-md-8">
+              <a class="botaoazul rocho" href=''>Redação para Ensino Fundamental</a>
               <a class="botaoazul" href=''>Redação para Vestibulares</a>
-              <a class="botaoazul" href=''>Redação para Ensino Fundamental</a>
               <ul >
                 <li><i class="fa fas fa-phone-alt"></i><span>21 99698-5031</span></li>
                 <li><a href='https://www.facebook.com/cursoescreva'><i class="fa fab fa-facebook-square"></i></a></li>

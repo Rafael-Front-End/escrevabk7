@@ -44,12 +44,9 @@ class ZflagGaleriaHome extends WP_Widget
                     <div class="photo '.$slug.'">
                       <div class="single-awesome-project">
                         <div class="awesome-img">
-                          <a class="venobox" href="'.$img.'"><img width="100%" height="auto" src="'.$thumbnail[0].'" alt="" /></a>
-                          <div class="add-actions text-center">
-                            <div class="project-dec">
-                              
-                            </div>
-                          </div>
+                          
+                          <img width="100%" height="auto" src="'.$thumbnail[0].'" alt="" />
+                          
                         </div>
                       </div>
                     </div>
