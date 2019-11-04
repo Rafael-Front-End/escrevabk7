@@ -8,30 +8,6 @@ $(window).load(function() {
 $(function(){ 
 
 
-jQuery(document).ready(function($) {
-    $('.wpcf7-form').each(function () {
-        $(this).on('submit', function (e) {
-            e.preventDefault();
-
-            $.ajax({
-                type: 'POST',    // Can also choose GET instead
-                url: 'forms/getParams',
-                data: $(this).serialize(),
-                dataType: "json",
-                success: function (data) {
-                	alert('Funcionol');
-                    $(this)[0].reset();    // Optional in case you want to clear the form on success
-                },
-                error: function (data, errorThrown) {
-                    console.log(errorThrown);
-                }
-            });
-
-        });
-    });
-});
-
-
 	    /*---------------------
     Venobox
   --------------------- */

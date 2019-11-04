@@ -1,5 +1,30 @@
+h2{
+  font:Bold 27px Montserrat Bold;
+}
+
+
 .wpcf7 form.sent{
   display: none;
+}
+
+#portfolio .photo {
+    width: 20%;
+    float: left;
+    padding-right: 15px;
+    padding-bottom: 15px;
+     filter: grayscale(100%);
+}
+
+
+#portfolio .photo:hover{
+      -webkit-transition: 500ms -webkit-filter linear;
+      -moz-transition: 500ms -moz-filter linear;
+      -moz-transition: 500ms filter linear;
+      -ms-transition: 500ms -ms-filter linear;
+      -o-transition: 500ms -o-filter linear;
+      transition: 500ms filter linear, 500ms -webkit-filter linear;
+
+      filter: grayscale(0%);
 }
 
 
@@ -548,6 +573,41 @@ footer ul li::before {
   width: 1em; /* Also needed for space (tweak if needed) */
   margin-left: -1em; /* Also needed for space (tweak if needed) */
   font-size: 0.8em;
+}
+
+
+
+.botao_enviar_prematricula .btn:hover,
+.botao_enviar_prematricula .btn{
+  border-radius: 20px;
+  border-color: #000;
+  color: #000;
+  font:Bold 10px Arial Bold;
+  background: none;
+  float: none;
+  text-align: center;
+  padding: 8px 30px;
+
+}
+
+.botao_enviar_prematricula{
+  border-top:1px solid #c0c0c0; 
+  text-align:center;
+  margin: 30px;
+  padding-top: 40px;
+}
+
+
+.wpcf7-list-item-label{
+  float: right;
+}
+
+span.wpcf7-list-item {
+    width: 30%;
+}
+
+.wpcf7-form input{
+  margin-bottom: 30px;
 }
 
 /*=====================================*/

@@ -49,11 +49,14 @@ Use it to make something cool, have fun, and share what you've learned with othe
         p { 
             margin: 10px 0;
           font-size: 12px;
+        
+    line-height: 22px;
         }
 
         .conteudo_post figure,
         .conteudo_post img{
           max-width: 100%;
+          height: auto;
         }
 
         .logotxt{
@@ -185,7 +188,7 @@ body {
 
 h1, h2, h3, h4, h5, h6 {
   color: #424241;
-  font-family: 'Oswald';
+  font-family: Montserrat Bold;
 }
 #conteudo_site {
   background: #fff none repeat scroll 0 0;
@@ -647,7 +650,7 @@ img#post_thumbnail{
 
 main#main{
   padding-top: 30px;
-  padding-bottom: 30px;
+  padding-bottom: 80px;
 
 }
 
@@ -655,7 +658,6 @@ main#main{
   float: left;
   font-family: "Open Sans";
   font-weight: 400;
-  margin-top: 30px;
   width: 100%;
 }
 

@@ -306,3 +306,88 @@ function categoria_bloco_link_shortcode($atts){
 }
 
 add_shortcode( 'catbloclink', 'categoria_bloco_link_shortcode' );
+
+
+
+function zflag_galeria($atts){
+      $parametros = shortcode_atts( array(
+          'url' => '',
+          'titulo' => ''
+        ), 
+        $atts 
+      );
+
+       $url       = $parametros['url'];
+      $titulo       = $parametros['titulo'];
+
+        $html_categorias = '';
+        $html_galeria = '';
+        if(get_option('tema_zflag_galeria')){
+          $tema_zflag_galeria = json_decode(get_option('tema_zflag_galeria'));
+          $tema_zflag_galeria = (array) $tema_zflag_galeria;
+           
+          foreach ($tema_zflag_galeria as $key => $value) {
+            $vetor_galeria  = (array) $value;
+            $titulo = $vetor_galeria['titulo'];
+            $slug = str_replace(" ", "_", trim($titulo));
+
+             $html_categorias .= '<li>
+                            <a href="#" data-filter=".'.$slug.'">'.$titulo.'</a>
+                          </li>';
+
+
+            $imagem = $vetor_galeria['imagem'];
+            if($imagem != NULL){
+              $vetor_img = explode(', ', $imagem);
+              
+              foreach ($vetor_img as $key => $value) {
+                $thumbnail   =   wp_get_attachment_image_src(intval($value), 'medium');
+                $img         =   wp_get_attachment_url($value);
+                
+               
+                $html_galeria .='
+                  <!-- single-awesome-project start -->
+                    <div class="photo '.$slug.'">
+                      <div class="single-awesome-project">
+                        <div class="awesome-img">
+                          <a class="venobox" href="'.$img.'"><img width="100%" height="auto" src="'.$thumbnail[0].'" alt="" /></a>
+                          <div class="add-actions text-center">
+                            
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <!-- single-awesome-project end -->
+                 ';
+
+              }
+            }
+
+            
+
+          }
+
+          $galeria_html = '
+            <!-- Start portfolio Area -->
+            <div id="portfolio" class="portfolio-area area-padding fix">
+                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                  <div class="section-headline text-center">
+                    <h2>'.$title.'</h2>
+                  </div>
+                </div>
+                <!-- Start Portfolio -page -->
+                
+                <div class="awesome-project-content">
+                  '.$html_galeria.'
+                </div>
+            </div>
+            <!-- awesome-portfolio end -->
+          ';
+
+            $html_body = do_shortcode($galeria_html);
+        }
+
+      return $html_body;
+}
+
+add_shortcode( 'zflag_galeria', 'zflag_galeria' );
