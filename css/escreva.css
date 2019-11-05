@@ -33,6 +33,7 @@ h2{
 }
 .blocove p{
   font-size: 16px;
+  text-align: justify !important;
 }
 .blocove.rochoo{
   background: #763496;
@@ -71,6 +72,8 @@ h2{
   top:50%;
    -ms-transform: translateY(-50%);
   transform: translateY(-50%);
+  padding-right: 32px;
+
 }
 
 .blocove.azul{
@@ -112,7 +115,10 @@ main {
 }
 
 #portfolio .photo .awesome-img{
-  background-size: auto 100%;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center top;
+}
 }
 
 #portfolio .photo img.thumbnailhide{

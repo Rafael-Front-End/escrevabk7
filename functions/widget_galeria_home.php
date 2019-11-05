@@ -46,8 +46,9 @@ class ZflagGaleriaHome extends WP_Widget
                   $blocov = '<div class="blocove azul">
                               <div class="centervertical">
                                 <img src="'.get_bloginfo( 'template_directory' ).'/imagens/icons/iconportfolio1.png">
-                                <h3>Debate de temas atuais</h3>
-                                <p>A partir do conhecimento e do debate de temas atuais, o aluno se tornará capaz de argumentar de maneira aprofundada e eficiente.</p>
+                                <h3>Debates sobre temas atuais
+</h3>
+                                <p>As discussões sobre atualidades despertam no estudante a capacidade de reflexão e de argumentação, algo fundamental para produzir um texto, de modo eficiente e aprofundado.</p>
                               </div>
                           </div>';
                 }else  if($cont == 1){

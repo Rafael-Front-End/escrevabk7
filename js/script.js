@@ -17,13 +17,11 @@ $(function(){
 
 
 	
-	$(".vidWrapper").click(function(event) {    
-	    if($(event.target).hasClass('vidWrapper')) {
-	        event.preventDefault();
-	        console.log('ok');
-	        // Additional event handling code ...
-	    }
-	});
+
+	    $('.myHTMLvideo').click(function() {
+	        this.paused ? this.play() : this.pause();
+	    });
+
 
 	$('.photo .awesome-img').on('hover', function(){
 		var thisheight = $('.photo .awesome-img').height();
