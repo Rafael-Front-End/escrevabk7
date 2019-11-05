@@ -43,11 +43,6 @@ h2{
   background: #da374a;
 }
 
-.awesome-img img{
-   opacity: 0;
-}
-
-
 .blocove{
   padding: 40px 60px;
   text-align: center;
@@ -126,7 +121,7 @@ main {
 }
 }
 
-#portfolio .photo img.thumbnailhide{
+.thumbnailhide{
   opacity: 0;
 }
 
