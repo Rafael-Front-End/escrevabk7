@@ -457,7 +457,7 @@ input[type=submit],
 .fundoddepoimento {
     float: left;
     width: 100%;
-    padding: 50px 60px;
+    padding: 47px 60px;
     background-size: auto 100%;
     min-height: 1273px;
     height: 1053px;
@@ -481,7 +481,7 @@ input[type=submit],
     text-align: center;
     color:#fff;
     margin-top: 10px;
-    margin-bottom: 30px;
+    margin-bottom: 24px;
 }
 
 .testimonialstitulo{
