@@ -119,10 +119,10 @@ main {
   background-repeat: no-repeat;
   background-position: center top;
 }
-}
+
 
 .thumbnailhide{
-  opacity: 0;
+  opacity: 0 !important;
 }
 
 #portfolio .photo {
