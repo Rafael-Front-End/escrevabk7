@@ -410,7 +410,7 @@ input[type=submit],
     font-family: Arial Bold;
     color:#000;
     text-align: left;
-    margin-top: 15px;
+    margin: 17px 0;
 }
 
 .destaque_categorias.tipo_2 > .bloco_post > .content_post h4{
@@ -428,7 +428,7 @@ input[type=submit],
 
 .destaque_categorias.tipo_2 > .bloco_post > p,
 .txt_descricao, .destaque_categorias > .bloco_post > p {
-    font-size: 12px;
+    font-size: 14px;
     font-weight: initial;
     font-family: Arial;
     color:#555555;
@@ -442,13 +442,14 @@ input[type=submit],
 
 .tipo_4 > .bloco_post .btn{
 	text-align: center;
-    font-size: 12px;
+    font-size: 14px;
+    letter-spacing: 2px;
     font-weight: bold;
     font-family: Arial Bold;
     background-color: #f98644;
     color: #fff;
-    border-radius:20px;
-    padding: 6px 20px;
+    border-radius: 30px;
+    padding: 15px 60px;
     margin-top: 15px;
 }
 

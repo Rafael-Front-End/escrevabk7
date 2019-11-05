@@ -1750,9 +1750,6 @@ h3.subline_title,
   font-size: 16px;
 }
 
-.tipo_4.destaque_categorias > .bloco_post > h4 {
-  font-size: 12px;
-}
 
 
 .txt_descricao,
@@ -1783,7 +1780,7 @@ h3.subline_title,
   background-position: center center;
   background-size: cover;
   border: 2px solid #424241;
-  height: 120px;
+  height: 190px;
   width: 100%;
 }
 
