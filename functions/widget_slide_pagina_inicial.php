@@ -25,6 +25,7 @@ class slide_pagina_inicial extends WP_Widget
             $img_align = $value['img_align'];
             $texto = stripslashes($value['texto']);
             $imagem = $value['imagem'];
+            $imagem_fundo = $value['imagem_fundo'];
             $link = $value['link'];
             $background = $value['background'];
 
@@ -50,7 +51,7 @@ class slide_pagina_inicial extends WP_Widget
             ";
             $html_destaques .= " 
 
-                <div  style='background-image: url(\"".get_bloginfo( 'template_directory' )."/imagens/fundo_slide.jpg\");' class=\"item ".($contador_de_post == 1 ? 'active' : '')."\">
+                <div  style='background-image: url(\"{$imagem_fundo}\");' class=\"item ".($contador_de_post == 1 ? 'active' : '')."\">
                   <div style='".($background != NULL ? 'background-color:rgb('.$background.', 0.8); !important' : '')."' class='fundoslide'></div>
                   <div class=\"container desktop\">";
 

@@ -17,6 +17,13 @@ $(function(){
 
 
 	
+	$(".vidWrapper").click(function(event) {    
+	    if($(event.target).hasClass('vidWrapper')) {
+	        event.preventDefault();
+	        console.log('ok');
+	        // Additional event handling code ...
+	    }
+	});
 
 	$('.photo .awesome-img').on('hover', function(){
 		var thisheight = $('.photo .awesome-img').height();

@@ -16,7 +16,7 @@
 			$new_key = $new_key == 0 || $new_key == NULL ? 1 : $new_key+1;
 		}
 
-		$tema_zflag_slide_principal[$new_key] = ['background' => $_POST['background'], 'img_align' => $_POST['img_align'], 'titulo' => $_POST['titulo'], 'link' => $_POST['link'], 'texto' => $_POST['texto'], 'imagem' => $_POST['ad_image'], 'video' => $_POST['video']];
+		$tema_zflag_slide_principal[$new_key] = ['background' => $_POST['background'], 'img_align' => $_POST['img_align'], 'titulo' => $_POST['titulo'], 'link' => $_POST['link'], 'texto' => $_POST['texto'], 'imagem' => $_POST['ad_image'], 'imagem_fundo' => $_POST['imagem_fundo'], 'video' => $_POST['video']];
 		
 		delete_option('tema_zflag_slide_principal');
 		if(add_option('tema_zflag_slide_principal', json_encode($tema_zflag_slide_principal))){
@@ -39,6 +39,7 @@
 						$link = $value['link'];
 						$texto = $value['texto'];
 						$imagem = $value['imagem'];
+						$imagem_fundo = $value['imagem_fundo'];
 						$video = $value['video'];
 						$background = !empty($value['background']) ? $value['background'] : '#77D9E2';
 						$img_align = $value['img_align'];
@@ -86,6 +87,13 @@
 						    <input style="width: 70%;" id="upload_image" type="text" size="36" name="ad_image" value="'.$imagem.'" /> 
 						    <input style="width: 30%;" id="upload_image_button" class="button" type="button" value="Upload Image" />
 						</div>
+						
+						<div for="form-group">
+				        	<label for="upload_image2">Imagem</label>
+						    <input style="width: 70%;" id="upload_image2" type="text" size="36" name="imagem_fundo" value="'.$imagem_fundo.'" /> 
+						    <input style="width: 30%;" id="upload_image_button2" class="button" type="button" value="Upload Image" />
+						</div>
+						
 				        <div class="form-group">
 				            <button name="salvar" class="salva btn btn-primary" />
 				                Salvar
@@ -157,12 +165,13 @@
 						$titulo = $value['titulo'];
 						$texto = $value['texto'];
 						$imagem = $value['imagem'];
+						$imagem_fundo = $value['imagem_fundo'];
 						$video = $value['video'];
 						$img_align = $value['img_align'];
 						$background = $value['background'];
 						$link = $value['link'];
 
-						$new_tema_zflag_slide_principal[$key] = ['background' => $background, 'img_align' => $img_align, 'titulo' => $titulo,'link' => $link, 'texto' => $texto, 'imagem' => $imagem];
+						$new_tema_zflag_slide_principal[$key] = ['background' => $background, 'img_align' => $img_align, 'titulo' => $titulo,'link' => $link, 'texto' => $texto, 'imagem' => $imagem, 'imagem_fundo' => $imagem_fundo];
 					}
 				}
 
