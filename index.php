@@ -48,8 +48,6 @@
 
   </main><!-- #main -->
       <div class="fundoddepoimento">
-          <div class="container">
             <?php dynamic_sidebar('campo_depoimento'); ?>
-          </div>
     </div>
 <?php get_footer(); ?>

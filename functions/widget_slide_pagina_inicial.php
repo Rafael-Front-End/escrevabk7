@@ -25,6 +25,7 @@ class slide_pagina_inicial extends WP_Widget
             $img_align = $value['img_align'];
             $texto = stripslashes($value['texto']);
             $imagem = $value['imagem'];
+            $link = $value['link'];
             $background = $value['background'];
 
 
@@ -61,7 +62,7 @@ class slide_pagina_inicial extends WP_Widget
                        <div class='lado-texto ".($img_align == 'Direita' ? 'direita' : '')." '>
                         <h1>{$titulo}</h1>
                         <p>{$texto}</p>
-                         <div class='botaonoslidedahomeolocoqueclassegrande'><a href='#' class='btn'>VER MAIS</a></div>
+                         <div class='botaonoslidedahomeolocoqueclassegrande'><a href='".$link."' class='btn'>VER MAIS</a></div>
                       </div>
                       ";
                         
@@ -83,7 +84,7 @@ class slide_pagina_inicial extends WP_Widget
                        <div class='lado-texto'>
                         <h1>{$titulo}</h1>
                         <p>{$texto}</p>
-                        <a href='#' class='btn'>VER MAIS</a>
+                        <a href='".$link."' class='btn'>VER MAIS</a>
                       </div>
                       ";
 
@@ -113,13 +114,13 @@ class slide_pagina_inicial extends WP_Widget
                   $html_destaques
                 </div>
                 <a class=\"left carousel-control\" href=\"#myCarousel{$id_bootstrap_carousel}\" role=\"button\" data-slide=\"prev\">
-                  <span class=\"glyphicon glyphicon-chevron-left\" aria-hidden=\"true\"></span>
+                  <img class='seta_esq' src=\"".get_bloginfo( 'template_directory' )."/imagens/icons/seta_esq.png\">
                   <span class=\"sr-only\">Previous</span>
                 </a>
                 <a class=\"right carousel-control\" href=\"#myCarousel{$id_bootstrap_carousel}\" role=\"button\" data-slide=\"next\">
-                  <span class=\"glyphicon glyphicon-chevron-right\" aria-hidden=\"true\"></span>
+                  <img class='seta_dir' src=\"".get_bloginfo( 'template_directory' )."/imagens/icons/seta_dir.png\">
                   <span class=\"sr-only\">Next</span>
-                </a>  
+                </a> 
               </div>
             </div>";
 

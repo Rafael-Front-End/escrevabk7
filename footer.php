@@ -8,13 +8,11 @@
  */
 ?>  
     <div class="barramidia">
-      <div class='container'>
-        <h3>Estamos na mídia</h3>
+        <h3><a href="<?php echo get_page_link( get_page_by_path( 'na-midia' ) ); ?>">Estamos na mídia</a></h3>
         <div class="col-md-3"> <img src='<?php bloginfo( 'template_directory' ); ?>/imagens/logos/globo.png'> </div>
         <div class="col-md-3"> <img src='<?php bloginfo( 'template_directory' ); ?>/imagens/logos/infomoney.png'> </div>
         <div class="col-md-3"> <img src='<?php bloginfo( 'template_directory' ); ?>/imagens/logos/terra.png'> </div>
         <div class="col-md-3"> <img src='<?php bloginfo( 'template_directory' ); ?>/imagens/logos/mundo_marketing.png'> </div>
-      </div>
     </div>
 		<footer class="row" id="rodape"> 
 			  <div style='' class="rodape1">
@@ -25,7 +23,7 @@
 			    
 			  	
 		    </div><!-- .container -->
-		     <section class="copyright col-md-12">
+		     <section class="copyright col-md-12"> 
           <div class="container">
             <a class="pull-left" href='<?php echo esc_url(the_permalink());?>'><img src='<?php bloginfo( 'template_directory' ); ?>/imagens/maracaescreva.png'></a>
             <?php dynamic_sidebar('rodape2'); ?>

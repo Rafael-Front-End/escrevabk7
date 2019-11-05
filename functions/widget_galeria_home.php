@@ -37,45 +37,52 @@ class ZflagGaleriaHome extends WP_Widget
               
               foreach ($vetor_img as $key => $value) {
                 $thumbnail   =   wp_get_attachment_image_src(intval($value), 'medium');
+                $thumbnail   =   $thumbnail[0];
                 $img         =   wp_get_attachment_url($value);
                 
 
                 if($cont == 0){
 
                   $blocov = '<div class="blocove azul">
-                              <img src="'.get_bloginfo( 'template_directory' ).'/imagens/icons/iconportfolio1.png">
-                              <h3>Debate de temas atuais</h3>
-                              <p>A partir do conhecimento e do debate de temas atuais, o aluno se tornará capaz de argumentar de maneira aprofundada e eficiente.</p>
+                              <div class="centervertical">
+                                <img src="'.get_bloginfo( 'template_directory' ).'/imagens/icons/iconportfolio1.png">
+                                <h3>Debate de temas atuais</h3>
+                                <p>A partir do conhecimento e do debate de temas atuais, o aluno se tornará capaz de argumentar de maneira aprofundada e eficiente.</p>
+                              </div>
                           </div>';
                 }else  if($cont == 1){
                     $blocov = '<div class="blocove rochoo">
+                              <div class="centervertical">
                               <img src="'.get_bloginfo( 'template_directory' ).'/imagens/icons/icone2.png">
                               <h3>Grupos de até 15 alunos</h3>
                               <p>O trabalho em grupos pequenos, com até 15 alunos, torna as aulas personalizadas fugindo dos modelos ou fórmulas “prontas”.</p>
+                          </div>
                           </div>';
                 }else  {
                     $blocov = '<div class="blocove vermelho">
+                              <div class="centervertical">
                               <img src="'.get_bloginfo( 'template_directory' ).'/imagens/icons/iconportfolio3.png">
                               <h3>Ambiente aconchegante</h3>
                               <p>Ambiente confortável, que propicia condições ideais para serenidade do aprendizado.</p>
+                          </div>
                           </div>';
                 }
 
 
                 $cont++;
 
-                $html_galeria_home .='
+                $html_galeria_home .="
                   <!-- single-awesome-project start -->
-                    <div class="photo '.$slug.'">
-                      <div class="single-awesome-project">
-                        <div class="awesome-img">
-                          '.$blocov .'
-                          <img width="100%" height="auto" src="'.$thumbnail[0].'" alt="" />
+                    <div class=\"photo {$slug}\">
+                      <div class=\"single-awesome-project\">
+                        <div class=\"awesome-img\" style=\"background-image: url({$img});\">
+                          {$blocov} 
+                          <img width=\"100%\" height=\"auto\" class=\"thumbnailhide\" src=\"{$thumbnail}\" alt=\"\" />
                         </div>
                       </div>
                     </div>
                     <!-- single-awesome-project end -->
-                 ';
+                 ";
 
               }
             }
@@ -99,7 +106,7 @@ class ZflagGaleriaHome extends WP_Widget
             <!-- awesome-portfolio end -->
           ';
 
-            echo do_shortcode($galeria_home_html);
+            echo $galeria_home_html;
         }
            
     echo $args["after_widget"];
