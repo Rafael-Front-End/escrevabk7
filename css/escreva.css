@@ -231,6 +231,13 @@ main {
     border: none;
 }
 
+
+.botao_enviar_prematricula .btn:hover,
+.destaque_categorias .todososposts:hover,
+.botaonoslidedahomeolocoqueclassegrande a:hover{
+  background: #000 !important;
+  color:#fff !important; 
+}
 .botaonoslidedahomeolocoqueclassegrande{
 	width: 100%;
 	float: left;
@@ -431,6 +438,8 @@ input[type=submit],
 }
 
 
+
+
 .tipo_4 > .bloco_post .btn{
 	text-align: center;
     font-size: 12px;
@@ -441,6 +450,11 @@ input[type=submit],
     border-radius:20px;
     padding: 6px 20px;
     margin-top: 15px;
+}
+
+
+.tipo_4 > .bloco_post .btn:hover{
+  background: #FDCEB3;
 }
 
 
@@ -515,9 +529,8 @@ header#pagina_cabecalho.page_width {
 .form_footer{
 	float: right;
 }
-
 .form_footer input[type=submit]{
-	margin: 15px 0;
+  margin: 15px 0;
     padding: 4px 30px;
     float: right;
     border-color: #f47d3a !important;
@@ -525,6 +538,10 @@ header#pagina_cabecalho.page_width {
     border-radius: 20px;
     border: 2px solid #f47d3a !important;
     font-size: 12px; 
+}
+.form_footer input[type=submit]:hover{
+  background: #f47d3a !important;
+  color:#fff !important; 
 }
 
 /*=====================================*/
