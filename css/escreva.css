@@ -553,6 +553,7 @@ input[type=submit],
     color:#555555;
     height: 67px;
     overflow: hidden;
+    max-height: 70px;
     text-align: left;
 }
 
