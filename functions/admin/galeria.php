@@ -1,6 +1,6 @@
 <?php
 	$html = '<h2>Galeria</h2>';
-	$html_img = '';
+	$html_img = ''; 
 	//Carrega os dados do galeria
 	$tema_zflag_galeria = array();
 	if(get_option('tema_zflag_galeria')){
@@ -17,7 +17,7 @@
 			$new_key = $new_key == 0 || $new_key == NULL ? 1 : $new_key+1;
 		}
 
-		$tema_zflag_galeria[$new_key] = ['titulo' => $_POST['titulo'], 'imagem' => $_POST['ad_image']];
+		$tema_zflag_galeria[$new_key] = ['id' => $new_key, 'titulo' => $_POST['titulo'], 'imagem' => $_POST['ad_image']];
 		
 		delete_option('tema_zflag_galeria');
 		if(add_option('tema_zflag_galeria', json_encode($tema_zflag_galeria))){
@@ -101,6 +101,11 @@
 								<td>
 									<strong>
 										<a class="row-title" href="?page=zflag_theme_admin_geral&id='.$key.'&subpage=galeria&acao=editar" aria-label="“'.$value['titulo'].'” (Editar)">'.$value['titulo'].'</a>
+									</strong>
+								</td>
+								<td>
+									<strong>
+										[zflag_galeria id="'.$value['id'].'"]
 									</strong>
 								</td>
 								<td>

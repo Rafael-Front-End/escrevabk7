@@ -53,7 +53,7 @@ while ( have_posts() ) : the_post();
     <div class="clearfix"></div>
     <!-- laranja_com_sidebar  -->
     <main id="main" class="site-main container" role="main">
-        <div class="col-md-9">
+        <div class="col-md-8">
            
 
             <section id="post_thumbnail" class="">
