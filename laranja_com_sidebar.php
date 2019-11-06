@@ -45,15 +45,15 @@ while ( have_posts() ) : the_post();
             <span class="meta-category"><a href="<?php echo $link_categoria;?>" class="category-2"><?php echo ($Id_categoria != 1 ? strtolower($Nome_categoria) : ''); ?></a></span>
             <?php  
                 the_title( '<h1 id="titulo_pagina">', '</h1>' );
-                echo '<h4>'.get_nskw_subtitle().'</h4>';
                
             ?>
         </div>
 
     </header>
     <div class="clearfix"></div>
+    <!-- laranja_com_sidebar  -->
     <main id="main" class="site-main container" role="main">
-        <div class="col-md-8">
+        <div class="col-md-9">
            
 
             <section id="post_thumbnail" class="">

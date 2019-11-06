@@ -13,7 +13,7 @@
 
 
 			<?php if ( is_active_sidebar( 'barra_lateral' ) ) : ?>
-				<div class="sidebar col-md-4">	 
+				<div class="sidebar col-md-3">	 
 					<?php dynamic_sidebar( 'barra_lateral' ); ?>
 			    </div>
 			<?php endif; ?>

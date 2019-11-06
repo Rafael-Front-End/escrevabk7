@@ -19,7 +19,14 @@ $(function(){
 	
 
 	    $('.myHTMLvideo').click(function() {
-	        this.paused ? this.play() : this.pause();
+	        if(this.paused){
+	        	this.play();
+	        	this.prop('controls',true);
+	        }else{
+	        	this.pause();
+	        	this.prop('controls',false);
+	        	
+	        }
 	    });
 
 

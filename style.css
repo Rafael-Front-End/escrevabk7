@@ -27,7 +27,7 @@ Use it to make something cool, have fun, and share what you've learned with othe
   border-color: #333;
   color: #fff;
   text-decoration: none;
-}
+}`
 
 .bt_tags span {
   background-color: #222;
@@ -283,7 +283,6 @@ blockquote::after {
 .textwidget h3 span,
 h3.subline_title span,
 .destaque_categorias h3 span{
-  padding: 10px 0 !important;
   display: block;
 }
 
@@ -353,9 +352,8 @@ h3.subline_title span,
 }
 
 header#pagina_cabecalho h1{
-  font-size: 38px;
   line-height: 55px;
-  margin: 0 auto 15px;
+  margin: 0 auto 0;
   padding: 0;
   font-family: Montserrat Bold;
 }
@@ -1677,14 +1675,9 @@ footer .textwidget h3 .theme-border-color {
   padding-left: 0;
 }
 
-h3.subline_title,
-.destaque_categorias h3 {
-  font: bold 23px bebaskai;
-}
 
 .sidebar > .destaque_categorias h3 {
   float: left;
-  font: bold 23px bebaskai;
   width: 100%;
   margin-top: 0;
   text-align: center;
@@ -1780,7 +1773,6 @@ h3.subline_title,
   background-position: center center;
   background-size: cover;
   border: 2px solid #424241;
-  height: 190px;
   width: 100%;
 }
 

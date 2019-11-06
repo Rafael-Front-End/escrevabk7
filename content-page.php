@@ -18,6 +18,7 @@
         </div>
     </header>
     <div class="clearfix"></div>
+    <!-- content-page -->
  <main id="main" class="site-main container" role="main">
     <div id="tema2" class="col-md-12">
         <section id="post_thumbnail">

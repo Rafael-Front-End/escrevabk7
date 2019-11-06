@@ -50,6 +50,7 @@
 
     </header>
     <div class="clearfix"></div>
+    <!-- content-single -->
  <main id="main" class="site-main container" role="main">
         <div id="line_post" class="col-md-8">
            

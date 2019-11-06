@@ -8,6 +8,7 @@
  */
 
 get_header(); ?>
+<!-- image -->
  <main id="main" class="site-main container" role="main">
 
 			<?php

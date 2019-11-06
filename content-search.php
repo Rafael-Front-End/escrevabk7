@@ -28,6 +28,7 @@
 
 
 	$html_categoria_cultura .='
+  <!-- content-search -->
         <div class="tipo_1	 destaque_categorias">
             '.($contador == 1 ? '' : '<h3></h3>').'
             <div class="bloco_post">

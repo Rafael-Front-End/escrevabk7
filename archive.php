@@ -17,9 +17,9 @@
  */
 
 get_header(); ?> 
-
+<!-- archive -->
  <main id="main" class="site-main container" role="main">
- <div class="col-md-8">
+ <div class="col-md-9">
                 <header id="pagina_cabecalho">
                     <div class="col-md-12">
                         <span class="meta-category"><a href="<?php echo $link_categoria;?>" class="category-2"><?php echo ($Id_categoria != 1 ? strtolower($Nome_categoria) : ''); ?></a></span>

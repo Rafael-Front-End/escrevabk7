@@ -7,7 +7,7 @@
  * @since Twenty Fifteen 1.0
  */
 ?>
-
+<!-- author-bio -->
 <div class="author-info">
 	<h2 class="author-heading"><?php _e( 'Published by', 'twentyfifteen' ); ?></h2>
 	<div class="author-avatar">

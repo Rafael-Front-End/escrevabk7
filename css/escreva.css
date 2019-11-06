@@ -1,8 +1,37 @@
-h2{
-  font:Bold 27px Montserrat Bold;
+
+h1 span, h2 span, h3 span,
+h1, h2, h3{
+    color: #000;
+    font-family: Montserrat Bold;
+    line-height: 37px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+h1 span,
+h1{
+  font-size: 50px;
 }
 
 
+h2 span,
+h2{
+  font-size: 40px;
+}
+
+h3 span,
+h3{
+  font-size: 26px;
+}
+
+p{
+  margin:20px 0;
+}
+
+.sidebar .destaque_categorias > .bloco_post {
+     padding: 0 0 15px 0 !important; 
+     float: left; 
+}
 
 .slide_home .seta_dir{
         margin-left: 10px !important;
@@ -257,7 +286,7 @@ input[type=submit],
 }
 
 .botaoazul {
-    padding: 8px 30px;
+    padding: 6px 30px;
     border-radius: 20px;
     background: #20cceb;
     float: left;
@@ -304,7 +333,7 @@ input[type=submit],
 }
 
 #menu_3{
-	margin-top: 33px !important;
+	margin-top: 24px !important;
 }
 
 #menu_3 li {
@@ -314,13 +343,13 @@ input[type=submit],
 
 
 #pequena_logo_topo {
-    max-height: 127px;
+    max-height: 80px;
 }
 
 #menu_topo.navbar-default {
     border: none !important;
-    height: 118px;
-    padding: 15px 0;
+    height: 100px;
+    padding: 10px 0;
     margin:0;
 }
 
@@ -517,14 +546,20 @@ input[type=submit],
 
 .destaque_categorias.tipo_2 > .bloco_post > .thumbnail_post{
     max-width: 40%;
-    height: 95px;
+    min-height: 90px;
+    margin-top: 3px;
+    float: left;
 }
 
+/*.tipo_2 > .bloco_post > .thumbnail_post img{
+  opacity: 0;    
+}
+*/
 .destaque_categorias.tipo_2 > .bloco_post > .thumbnail_post, 
 .tipo_4 > .bloco_post > .thumbnail_post {
     border: none;
-    border-top-left-radius: 20px;
-    border-top-right-radius: 20px;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
 }
 .destaque_categorias.tipo_2 > .bloco_post > .content_post h4,
 .destaque_categorias.tipo_2 h4,
@@ -534,7 +569,7 @@ input[type=submit],
     font-family: Arial Bold;
     color:#000;
     text-align: left;
-    margin: 17px 0;
+    margin: 8px 0;
 }
 
 .destaque_categorias.tipo_2 > .bloco_post > .content_post h4{
@@ -588,13 +623,7 @@ input[type=submit],
     text-align: center;
 }
 
-.destaque_categorias h3 span {
-    font-size: 40px !important;
-    color: #000;
-    font-family: Montserrat Bold;
-    line-height: 37px !important;
-    font-weight: bold;
-}
+
 
 
 /*=====================================*/
@@ -611,7 +640,7 @@ header#pagina_cabecalho.page_width {
     width: 100%;
     color: #fff;
     background-color: #bc84d7;
-    padding-top: 20px;
+    padding: 42px;
 }
 
 /*=====================================*/
@@ -800,7 +829,10 @@ footer#rodape  .textwidget{
   font-size: 14px;
 }
 
+.widget_nav_menu h2,
+footer#rodape .textwidget h3 span,
 footer#rodape .textwidget h3,
+.rodape1 h3 span,
 .rodape1 h3,
 footer h2{
 	font-family: Arial Bold;

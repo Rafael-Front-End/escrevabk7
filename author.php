@@ -14,7 +14,7 @@ endif;
 
 ?> 
 
-
+<!-- author -->
 <main id="pagina_author" class="site-main container" role="main">
 	<div class="col-md-12">
 		<div class="meta-item author">

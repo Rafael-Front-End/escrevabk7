@@ -45,7 +45,6 @@ while ( have_posts() ) : the_post();
             <span class="meta-category"><a href="<?php echo $link_categoria;?>" class="category-2"><?php echo ($Id_categoria != 1 ? strtolower($Nome_categoria) : ''); ?></a></span>
             <?php  
                 the_title( '<h1 id="titulo_pagina">', '</h1>' );
-                echo '<h4>'.get_nskw_subtitle().'</h4>';
                
             ?>
         </div>
@@ -67,7 +66,7 @@ while ( have_posts() ) : the_post();
 
                     </div>
                     <div class="col-md-6"><strong style="float:left; width:100%;">Obrigado por se inscrever</strong>
-                    <p style="float:left; max-width:200px;">Continue navegando pelo site para mais informações sobre nosso curso e ter acesso a artigos informativos</p>
+                    <p style="float:left; max-width:200px;">Continue navegando pelo site para mais informações sobre nosso curso e ter acesso a artigos informativos.</p>
 
                     </div>
                     <?php  the_content(); ?>
