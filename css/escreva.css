@@ -28,6 +28,39 @@ p{
   margin:20px 0;
 }
 
+
+.destaque_categorias > .bloco_post > .thumbnail_post > img {
+    opacity: 0;
+}
+
+
+.diagrama_metodologia{
+  float: left;
+  width: 40%;
+}
+.diagrama_metodologia p{
+  text-align: center;
+  font-size: 18px;
+  font-family: Arial Regular;
+  font-weight: initial;
+  color:#555;
+}
+
+.diagrama_metodologia .ibagem{
+  border: 5px solid rgb(188,132,215);
+  border-radius: 100%;
+  width: 150px;
+  margin: 0 auto;
+  text-align: center;
+  height: 150px;
+} 
+
+.diagrama_metodologia:first-child,
+.diagrama_metodologia:last-of-type{
+  width: 30%;
+}
+
+
 .sidebar .destaque_categorias > .bloco_post {
      padding: 0 0 15px 0 !important; 
      float: left; 
@@ -506,6 +539,7 @@ input[type=submit],
 }
 
 
+.fundoddepoimento .textwidget h3 span,
 .fundoddepoimento .textwidget h3 {
     border-bottom: none;
     border-color: -moz-use-text-color -moz-use-text-color #424241 !important;
@@ -561,6 +595,19 @@ input[type=submit],
     border-top-left-radius: 10px;
     border-top-right-radius: 10px;
 }
+
+.tipo_4 > .bloco_post > .thumbnail_post{
+  min-height: 200px;
+}
+
+
+.destaque_categorias.tipo_2 > .bloco_post > .thumbnail_post{
+  min-height: 90px;
+}
+
+
+
+
 .destaque_categorias.tipo_2 > .bloco_post > .content_post h4,
 .destaque_categorias.tipo_2 h4,
 .tipo_4 > .bloco_post h4{

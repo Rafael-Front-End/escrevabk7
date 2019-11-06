@@ -15,19 +15,31 @@ $(function(){
 	// 	  },'slow');
 	// });
 
+    $("#svgContainer").HTMLSVGconnect({
+        stroke: "#bc84d7",
+        strokeWidth: 5,
+        orientation: "auto",
+        paths: [
+          { start: "#diagrama_metodologia_1", end: "#diagrama_metodologia_2", },
+          { start: "#diagrama_metodologia_2", end: "#diagrama_metodologia_3", }
+        ]
+      }); 
 
-	
+	    //For Firefox we have to handle it in JavaScript 
+		var vids = $("video"); 
+		$.each(vids, function(){
+		       this.controls = false; 
+		}); 
+		//Loop though all Video tags and set Controls as false
 
-	    $('.myHTMLvideo').click(function() {
-	        if(this.paused){
-	        	this.play();
-	        	this.prop('controls',true);
-	        }else{
-	        	this.pause();
-	        	this.prop('controls',false);
-	        	
-	        }
-	    });
+		$("video").on('click', function() {
+			  if (this.paused) {
+			  	this.controls = true; 
+			  } else {
+			  	this.pause();
+			  	this.controls = false; 
+			  }
+		});
 
 
 	$('.photo .awesome-img').on('hover', function(){

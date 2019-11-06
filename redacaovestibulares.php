@@ -75,15 +75,32 @@ while ( have_posts() ) : the_post();
                 </div>
                 
                 <div id='inner_post_widget'> <?php dynamic_sidebar('inner_post_widget'); ?></div>
- 
-            </section>
-            <section id="comenarios">
-                <?php
-                    // If comments are open or we have at least one comment, load up the comment template.
-                    if ( comments_open() || get_comments_number() ) :
-                        comments_template();
-                    endif;
-                ?> 
+                
+                <div id="svgContainer"></div>
+
+                <div  class="diagrama_metodologia">
+                    <div id="diagrama_metodologia_1" class="ibagem">
+                    </div>
+                    <p>
+                        Aulas com interpretação textual e gramática;
+                    </p>
+                </div>
+                <div  class="diagrama_metodologia">
+                    <div id="diagrama_metodologia_2" class="ibagem">
+                    </div>
+                    <p>
+                        Aulas com técnicas de redação segundo demanda das escolas, bem como concursos para instituições públicas, como o Colégio Militar e Colégio Pedro II;
+                    </p>
+                </div>
+                <div  class="diagrama_metodologia">
+                    <div id="diagrama_metodologia_3" class="ibagem">
+                    </div>
+                    <p>
+                        Debates sobre temas atuais;
+                    </p>
+                </div>
+                <svg width="500" height="500"><line x1="50" y1="50" x2="350" y2="350" stroke="black"/></svg>
+
             </section>
         </div>
         <?php get_sidebar(); ?>

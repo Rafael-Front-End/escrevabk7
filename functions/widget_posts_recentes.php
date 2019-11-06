@@ -5,7 +5,7 @@
  
 
 class posts_recentes extends WP_Widget
-{
+{ 
     function __construct()
     {
         parent::__construct("posts_recentes", "Zflag Posts Recentes", array('description' => "Exibe os posts recentes"));
@@ -85,7 +85,9 @@ class posts_recentes extends WP_Widget
                   case 2: 
                     $html_categoria_cultura .="
                       <a href=\"{$url}\" class=\"bloco_post esquerda col-md-6\">
-                        <div class=\"thumbnail_post\" style=\"background-image:url($img);\"></div>
+                        <div class=\"thumbnail_post\" style=\"background-image:url($img);\">
+                          <img src='{$img}'>
+                        </div>
                         <div class=\"content_post\">
                           <h4>{$titulo}</h4>
                           <p><span>{$data_post}</span></p>
@@ -105,7 +107,9 @@ class posts_recentes extends WP_Widget
                   case 4: 
                     $html_categoria_cultura .='
                       <div href="'.$url.'" class="bloco_post esquerda col-md-3">
-                        <div class="thumbnail_post" style="background-image:url('.$img.');"></div>
+                        <div class="thumbnail_post" style="background-image:url('.$img.');">
+                          <img src="'.$img.'">
+                        </div>
                         <h4>'.$titulo.'</h4>
                         <p>'.$resumo.'</p>
                         <a class="btn btn-light" href="'.$url.'">VER MAIS</a>
