@@ -68,7 +68,7 @@ while ( have_posts() ) : the_post();
 
             </section>
             <?php echo $featured_audio;?>
-            <!-- section class="conteudo_post">
+            <section class="conteudo_post">
 
                 <div id="texto_post">
                     <?php  the_content(); ?>
@@ -76,7 +76,7 @@ while ( have_posts() ) : the_post();
                 
                 <div id='inner_post_widget'> <?php dynamic_sidebar('inner_post_widget'); ?></div>
                 
-                <div id="svgContainer"></div>
+                <!-- div id="svgContainer"></div>
 
                 <div  class="diagrama_metodologia">
                     <div id="diagrama_metodologia_1" class="ibagem">
@@ -98,10 +98,9 @@ while ( have_posts() ) : the_post();
                     <p>
                         Debates sobre temas atuais;
                     </p>
-                </div>
-                <svg width="500" height="500"><line x1="50" y1="50" x2="350" y2="350" stroke="black"/></svg>
+                </div -->
 
-            </section -->
+            </section>
         </div>
         <?php get_sidebar(); ?>
     </main><!-- #main -->
