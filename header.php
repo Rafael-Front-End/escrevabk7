@@ -136,7 +136,7 @@
     <script src="https://kit.fontawesome.com/a4502b4008.js"></script>
 
     <link href="<?php echo bloginfo('stylesheet_url'); ?>" type="text/css" media="all" rel="stylesheet" />
-    <link href="<?php bloginfo( 'template_directory' ); ?>/css/escreva.css?version=0.0.0.4" type="text/css" media="all" rel="stylesheet" />
+    <link href="<?php bloginfo( 'template_directory' ); ?>/css/escreva.css?version=0.0.0.6" type="text/css" media="all" rel="stylesheet" />
     <link rel="shortcut icon" type="image/x-icon" href="<?php bloginfo('template_directory')?>/imagens/fav32x32.png" />
     
 
