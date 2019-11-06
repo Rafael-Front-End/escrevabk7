@@ -13,7 +13,6 @@ h1{
   font-size: 50px;
 }
 
-
 h2 span,
 h2{
   font-size: 40px;
@@ -26,6 +25,44 @@ h3{
 
 p{
   margin:20px 0;
+}
+
+#pagina_blog .tipo_1.destaque_categorias > .bloco_post {
+    padding: 30px 0;
+}
+
+#pagina_blog{
+  padding: 50px 120px;
+} 
+
+#pagina_blog .destaque_categorias.tipo_1 > .bloco_post p {
+  font:19px Arial;
+  color:#777;
+}
+#pagina_blog .destaque_categorias.tipo_1 > .bloco_post .data span {
+  color:#555;
+  font:12px Arial;
+}
+
+#pagina_blog .destaque_categorias.tipo_1 > .bloco_post h4 {
+  font:22px Arial Bold;
+  color:#000;
+}
+
+
+
+#pagina_blog .destaque_categorias.tipo_1 > .bloco_post .data {
+  margin-top: 0 !important;
+}
+
+#pagina_blog .destaque_categorias.tipo_1 > .bloco_post > .thumbnail_post {
+    max-width: 50%;
+    height: 220px;
+}
+
+
+.tipo_1 > .bloco_post > .thumbnail_post {
+  border: none;
 }
 
 
@@ -170,6 +207,15 @@ main {
     padding-left: 15px;
     text-align: left;
 }
+
+#pagina_blog .bloco_post > .content_post {
+    padding-left: 30px;
+}
+
+#pagina_blog .sidebar  .content_post {
+    padding-left: 15px;
+}
+
 
 
 .wpcf7 form.sent{

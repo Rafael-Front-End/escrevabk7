@@ -55,7 +55,7 @@ while ( have_posts() ) : the_post();
         <div class="col-md-12">
            
 
-            <section class="prematricula conteudo_post">
+            <section class="conteudo_post">
 
                 <div id="texto_post">
                     <h3 style="width:100%; float:left; text-align:center; margin-bottom:40px;">Sua matrícula foi efetuada<br>
@@ -65,7 +65,7 @@ while ( have_posts() ) : the_post();
                     <figure width="100%" height="auto" style="max-width:170px; float:right;" class="wp-block-image"><img src="<?php bloginfo( 'template_directory' ); ?>/imagens/boneca-boca-aberta.png" alt="" class="wp-image-105"></figure>
 
                     </div>
-                    <div class="col-md-6"><strong style="float:left; width:100%;">Obrigado por se inscrever</strong>
+                    <div class="col-md-6"><strong style="float:left; width:100%;">Obrigado por se<br> inscrever</strong>
                     <p style="float:left; max-width:200px;">Continue navegando pelo site para mais informações sobre nosso curso e ter acesso a artigos informativos.</p>
 
                     </div>

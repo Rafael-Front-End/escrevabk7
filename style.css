@@ -1765,14 +1765,12 @@ footer .textwidget h3 .theme-border-color {
 .destaque_categorias > .bloco_post > .thumbnail_post{
   float: left;
   position: relative;
-  border: 2px solid #424241;
 }
 
 
 .bloco_post > .thumbnail_post {
   background-position: center center;
   background-size: cover;
-  border: 2px solid #424241;
   width: 100%;
 }
 
@@ -1900,9 +1898,7 @@ h3.subline_title,
   color: #424241;
 }
 
-.tipo_1 > .bloco_post > .thumbnail_post {
-  border: 2px solid #424241;
-}
+
 
 .bloco_post .btn-default:hover {
   background-color: #424241;

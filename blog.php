@@ -53,8 +53,8 @@ while ( have_posts() ) : the_post();
     </header>
     <div class="clearfix"></div>
     <!-- blog -->
-<main id="pagina_blog" class="site-main container" role="main">
-        <div class="tipo_3 col-md-8">
+    <main id="pagina_blog" class="site-main container" role="main">
+        <div class="tipo_3 col-md-12">
             <?php 
             // Check if there are any posts to display
             $wpb_all_query = new WP_Query(array(
@@ -85,7 +85,7 @@ while ( have_posts() ) : the_post();
                 $cat_name   = get_cat_name($cat_inf->cat_ID);
                 $cat_link   = get_category_link($cat_inf->cat_ID);
                 $titulo     = get_the_title();
-                $resumo     = resumo_txt(get_the_excerpt(),70,0);
+                $resumo     = resumo_txt(get_the_excerpt(),120,0);
                 $data_post  = get_the_date('d M Y');
                 $autor      = get_the_author();
                 $autor_link      = get_site_url()."/author/".$autor;
@@ -94,12 +94,12 @@ while ( have_posts() ) : the_post();
               
                         $html_categoria_cultura .='
                 <div class="tipo_1   destaque_categorias">
-                    '.($contador == 1 ? '' : '<h3></h3>').'
                         <div class="bloco_post">
-                          <a href="'.$url.'"  class="thumbnail_post" style="background-image:url('.$img.');"></a>
+                          <a href="'.$url.'"  class="thumbnail_post" style="background-image:url('.$img.');"><img src="'.$img.'"></a>
                             <div class="content_post">
-                              <p>Data da publicação: <span>'.$data_post.' </span></p>
+                              <p class="data"><span>'.$data_post.' </span></p>
                               <a href="'.$url.'" ><h4>'.$titulo.'</h4></a>
+                              <p>'.$resumo.'</p>
                             </div>
                         </div>
                 </div>
@@ -120,7 +120,6 @@ while ( have_posts() ) : the_post();
             <?php endif; ?>
 
         </div>
-        <?php get_sidebar(); ?>
     </main><!-- #main -->
 
 <?php 
