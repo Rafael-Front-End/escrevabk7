@@ -27,6 +27,42 @@ p{
   margin:20px 0;
 }
 
+#pagina_contato textarea{
+  height: 171px;
+  margin-bottom: 10px;
+}
+
+.socialicons a,
+.socialicons{
+  color: #4c5a67;
+  font:16px Arial Regular;
+}
+.socialicons{
+  float:left;
+  margin: 0 20px 20px 0px;
+
+}
+
+.socialicons img{
+  margin-right: 10px;
+}
+.socialicons .txt{
+  margin-top: 14px;
+}
+
+.socialicons a,
+.socialicons b,
+.socialicons span,
+.socialicons img,
+.socialicons .txt{
+  float: left;
+}
+
+#pagina_contato .icone{
+  color:orange;
+  font-size: 20px;
+}
+
 #pagina_blog .tipo_1.destaque_categorias > .bloco_post {
     padding: 30px 0;
 }
@@ -458,7 +494,7 @@ input[type=submit],
     border: none;
 }
 
-
+input[type=submit]:hover,
 .botao_enviar_prematricula .btn:hover,
 .destaque_categorias .todososposts:hover,
 .botaonoslidedahomeolocoqueclassegrande a:hover{
