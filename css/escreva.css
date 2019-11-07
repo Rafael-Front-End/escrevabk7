@@ -37,7 +37,7 @@ footer b, footer strong {
 
 
 #pagina_namidia .destaque_categorias {
-    min-height: 400px;
+    min-height: 340px;
 }
 
 .pagina_inicial .tipo_4 > .bloco_post > .thumbnail_post {
@@ -50,7 +50,7 @@ footer b, footer strong {
 }
 
 #pagina_namidia .tipo_1.destaque_categorias > .bloco_post {
-    padding: 45px 30px;
+    padding: 0 30px 30px 30px;
     text-align: left;
 }
 
