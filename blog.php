@@ -39,7 +39,7 @@ while ( have_posts() ) : the_post();
             ";
         }
     }
- 
+  
 ?>
     <header id="pagina_cabecalho" style="background-color: #f47d3a;"  class="page_width">
         <div class="col-md-12">
@@ -55,12 +55,14 @@ while ( have_posts() ) : the_post();
     <main id="pagina_blog" class="site-main container" role="main">
         <div class="tipo_3 col-md-12">
             <?php 
+             $depoimentocat = get_category_by_slug('depoimentos');
             // Check if there are any posts to display
             $wpb_all_query = new WP_Query(array(
               'post_type'=>'post', 
               'post_status'=>'publish', 
               'posts_per_page'=>10,
-              'paged' => get_query_var( 'paged' )
+              'paged' => get_query_var( 'paged' ),
+              'category__not_in'   => array($depoimentocat->cat_ID) 
           ));
             
             if ( $wpb_all_query->have_posts() ) : 
