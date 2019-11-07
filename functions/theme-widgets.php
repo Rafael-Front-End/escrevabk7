@@ -634,7 +634,37 @@ require('widget_texto.php');
 require('widget_galeria.php');
 require('widget_galeria_home.php');
 require('widget_posts_recentes.php');
+require('widget_depoimentos.php');
 
 
+function pine_dynamic_select_field_values ( $scanned_tag, $replace ) {  
+  
+    if ( $scanned_tag['name'] != 'solutions' )  
+        return $scanned_tag;
 
+    $rows = get_posts(
+      array ( 
+       'post_type' => 'solutions',  
+       'numberposts' => -1,  
+       'orderby' => 'title',  
+       'order' => 'ASC' 
+        )
+    );  
+  
+    if ( ! $rows )  
+        return $scanned_tag;
+
+    foreach ( $rows as $row ) {  
+        $scanned_tag['raw_values'][] = $row->post_title . '|' . $row->post_title;
+    }
+
+    $pipes = new WPCF7_Pipes($scanned_tag['raw_values']);
+
+    $scanned_tag['values'] = $pipes->collect_befores();
+    $scanned_tag['pipes'] = $pipes;
+  
+    return $scanned_tag;  
+}  
+
+add_filter( 'wpcf7_form_tag', 'pine_dynamic_select_field_values', 10, 2);
 

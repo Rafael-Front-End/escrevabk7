@@ -27,6 +27,15 @@ p{
   margin:20px 0;
 }
 
+
+.notas{
+  float: left;
+  max-width: 20%;
+  text-align: left;
+  margin-left: 20px;
+}
+
+
 #pagina_contato textarea{
   height: 171px;
   margin-bottom: 10px;
@@ -56,6 +65,7 @@ p{
 .socialicons img,
 .socialicons .txt{
   float: left;
+  font-family: Arial;
 }
 
 #pagina_contato .icone{
@@ -69,6 +79,7 @@ p{
 
 #pagina_blog{
   padding: 50px 120px;
+  float: left;
 } 
 
 #pagina_blog .destaque_categorias.tipo_1 > .bloco_post p {
@@ -95,6 +106,39 @@ p{
     max-width: 50%;
     height: 220px;
 }
+
+.pagina_depoimento .destaque_categorias.tipo_1 > .bloco_post > .thumbnail_post {
+    border-radius: 100%;
+    width: 160px;
+     height: 160px !important;
+}
+
+.pagina_depoimento .notas b{
+  float: left;
+  color: #555;
+  width: 100%;
+  font: bold 19px Arial bold;
+}
+
+.pagina_depoimento .notas h5{
+  font:Bold 14px Arial Bold;
+  color:#000;
+}
+
+.pagina_depoimento .notas h3{
+  border: none;
+  font-size: 60px;
+  text-align: left;
+  color: #000;
+}
+
+.pagina_depoimento .notas h4{
+  font-size: 19px !important;
+}
+.pagina_depoimento .destaque_categorias.tipo_1  .thumbnail_post{
+  max-width: initial !important;
+}
+
 
 
 .tipo_1 > .bloco_post > .thumbnail_post {
@@ -620,7 +664,7 @@ input[type=submit],
   margin-bottom:40px;
 }
 
-
+h3.testimonialstitulo, 
 .fundoddepoimento .textwidget h3 span,
 .fundoddepoimento .textwidget h3 {
     border-bottom: none;
@@ -832,51 +876,85 @@ header#pagina_cabecalho.page_width {
 
 /*=====================================*/
 
-
-
-
-.testimonial{
-  background: rgb(255,255,255, 0.8);
-  border-radius: 20px;
-  padding: 0 !important;
-  width: 40% !important;
-  margin: 0 35px 40px 0 !important;
-  float: left !important;
+.depoimentos_recentes .thumbnail_post{
+  float: left;
+  width: 40%;
 }
 
 
+.depoimentos_recentes .content_post{
+  float: left;
+  width: 73%;
+  margin-left: 15px;
+}
+
+.depoimentos_recentes{
+  padding: 15px;
+}
+
+.depoimentos_recentes,
+.testimonial{
+  background: rgb(255,255,255, 0.8);
+  border-radius: 20px;
+   width: 31% !important;
+  margin: 0 35px 40px 0 !important;
+  float: left !important;
+  text-decoration: none;
+}
+
+.testimonial{
+  padding: 0 !important;
+}
+
+.depoimentos_recentes{
+  padding:15px;
+}
+
+
+.depoimentos_recentes,
 .strong-view.simple .testimonial-heading {
     margin-left: 87px;
 }
 
 
+.depoimentos_recentes:last-of-type,
 .strong-view .testimonial:last-of-type{
   margin: 0 !important;
 }
 
-.fundoddepoimento .testimonial{
-  width: 31% !important;
-}
 
+
+.depoimentos_recentes .thumbnail_post img{
+  opacity: 0;
+}
+.depoimentos_recentes .thumbnail_post,
 .testimonial-image{
   border-radius: 100%;
   overflow: hidden;
       width: 70px;
     height: 70px;
+    background-size: cover;
+    margin-top: 22px;
+    background-repeat: no-repeat;
+    background-position: center top;
 }
 
+.depoimentos_recentes .content_post h4,
 .testimonial h3,
 h3.testimonial-heading a,
 h3.testimonial-heading{
   font:Bold 19px Arial Bold !important;
   color:#424241 !important;
+  text-align: left;
 }
 
+.depoimentos_recentes .content_post p,
 .testimonial p {
     margin-bottom: 0;
     padding-bottom: 0;
     font: 100 14px Arial;
     color:#555555;
+    text-align: left;
 }
 
 

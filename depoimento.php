@@ -1,7 +1,8 @@
 <?php
 /**
-Template Name: Laranja Com Sidebar
+Template Name: Depoimentos
 */
+ 
 
 get_header();
 while ( have_posts() ) : the_post();
@@ -42,7 +43,6 @@ while ( have_posts() ) : the_post();
 ?>
     <header id="pagina_cabecalho" style="background-color: #f47d3a;"  class="page_width">
         <div class="col-md-12">
-            <span class="meta-category"><a href="<?php echo $link_categoria;?>" class="category-2"><?php echo ($Id_categoria != 1 ? strtolower($Nome_categoria) : ''); ?></a></span>
             <?php  
                 the_title( '<h1 id="titulo_pagina">', '</h1>' );
                
@@ -51,40 +51,98 @@ while ( have_posts() ) : the_post();
 
     </header>
     <div class="clearfix"></div>
-    <!-- depoimento -->
-    <main id="main" class="site-main container" role="main">
-        <div class="col-md-8">
-           
-
-            <section id="post_thumbnail" class="">
+    <!-- blog -->
+    <main id="pagina_blog" class="pagina_depoimento site-main" role="main">
+        <div class="tipo_3 col-md-9">
             <?php 
-                if($featured_video){
-                    echo $featured_video;
-                    
-                }else{
-                    echo "<img src=\"{$img}\" alt=\"\" id=\"post_thumbnail\">";
+            // Check if there are any posts to display
+            $wpb_all_query = new WP_Query(array(
+              'post_type'=>'post', 
+              'post_status'=>'publish',  
+              'posts_per_page'=>10,
+              'category_name' => 'depoimentos', 
+              'paged' => get_query_var( 'paged' )
+          ));
+            
+            if ( $wpb_all_query->have_posts() ) : 
+      
+            $contador = 0;
+            // The Loop
+            while ($wpb_all_query->have_posts() ) : $wpb_all_query->the_post(); 
+                $contador++;
+
+                if ( has_post_thumbnail() ) {
+                    $the_post_thumbnail = get_the_post_thumbnail_url();
+                } else { 
+                    $the_post_thumbnail = get_bloginfo('template_directory')."/imagens/default-image.png";
+                } 
+
+                $custom = get_post_custom();
+
+                $nota_curso1 = $nota_curso2 = $nota_curso3 = $nota_enem = NULL;;
+                if(isset($custom['nota_enem'])) {
+                    $nota_enem = $custom['nota_enem'][0];
                 }
-            ?>
 
-            </section>
-            <?php echo $featured_audio;?>
-            <section class="conteudo_post">
+                if(isset($custom['nota_curso1'])) {
+                    $nota_curso1 = "<b>".$custom['nota_curso1'][0]."</b>";
+                }
 
-                <div id="texto_post">
-                    <?php  the_content(); ?>
-                </div>
+                if(isset($custom['nota_curso2'])) {
+                    $nota_curso2 = "<b>".$custom['nota_curso2'][0]."</b>";
+                }
+
+                if(isset($custom['nota_curso3'])) {
+                    $nota_curso3 = "<b>".$custom['nota_curso3'][0]."</b>";
+                }
                 
-                <div id='inner_post_widget'> <?php dynamic_sidebar('inner_post_widget'); ?></div>
- 
-            </section>
-            <section id="comenarios">
-                <?php
-                    // If comments are open or we have at least one comment, load up the comment template.
-                    if ( comments_open() || get_comments_number() ) :
-                        comments_template();
-                    endif;
-                ?> 
-            </section>
+                $cat_inf    = get_the_category();
+                $cat_inf    = $cat_inf[0];
+                $url        = get_permalink();
+                $img        = $the_post_thumbnail;
+                $cat_name   = get_cat_name($cat_inf->cat_ID);
+                $cat_link   = get_category_link($cat_inf->cat_ID);
+                $titulo     = get_the_title();
+                $resumo     = resumo_txt(get_the_excerpt(),120,0);
+                $data_post  = get_the_date('d M Y');
+                $autor      = get_the_author();
+                $autor_link      = get_site_url()."/author/".$autor;
+                $id_post    = $post->ID;
+              
+              
+                        $html_categoria_cultura .='
+                <div class="tipo_1   destaque_categorias">
+                        <div class="bloco_post">
+                          <a href="'.$url.'"  class="thumbnail_post" style="background-image:url('.$img.');"></a>
+                            <div class="content_post">
+                              <a href="'.$url.'" ><h4>'.$titulo.'</h4></a>
+                              <h5>Recomenda Escreva - Grupos para redação</h5>
+                              <p>'.$resumo.'</p>
+                              <p class="data"><span>'.$data_post.' </span></p>
+                            </div>
+                            <div class="notas">
+                                <h4>Nota redação</h4>
+                                <h3>'.$nota_enem.'</h3>
+                                '.$nota_curso1.$nota_curso2.$nota_curso3 .'
+                            </div>
+                        </div>
+                </div>
+                    ';
+             endwhile; 
+             echo $html_categoria_cultura;
+
+                if (function_exists("wp_bs_pagination")):
+                    echo "<div class='clearfix'></div><div class='col-md-12'>";
+                      wp_bs_pagination($wpb_all_query->max_num_pages);
+                    echo "</div>";
+                endif;
+     
+              wp_reset_postdata();
+
+            else: ?>
+                <p>Não existem posts para esta categoria!</p>
+            <?php endif; ?>
+
         </div>
         <?php get_sidebar(); ?>
     </main><!-- #main -->

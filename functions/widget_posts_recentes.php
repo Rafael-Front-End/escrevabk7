@@ -19,19 +19,21 @@ class posts_recentes extends WP_Widget
         echo $args[" "];
         
         global $do_not_duplicate;
-        
+        $depoimentocat = get_category_by_slug('depoimentos');
+                
         $quantidade = (!empty($instance['quantidade']) ? $instance['quantidade'] : 1);
         $design = $instance['design'];
 
         $categoria = (!empty($instance['categoria']) && ($instance['categoria'] != 'todas-categorias') ? "&category_name=".$instance['categoria'] : "");
+        
         $query_args =  array(
                 'showposts' => $quantidade,  
                 'category_name' => $categoria, 
-                'post__not_in'   => $do_not_duplicate
+                'post__not_in'   => $do_not_duplicate,
+                'category__not_in'   => array($depoimentocat->cat_ID)
         );
         if(empty($instance['categoria']) || ($instance['categoria'] == 'todas-categorias'))
           unset($query_args['category_name']); 
-
         query_posts($query_args);
 
 

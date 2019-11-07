@@ -42,11 +42,8 @@ while ( have_posts() ) : the_post();
 ?>
     <header id="pagina_cabecalho" style="background-color: #20cceb;" class="page_width">
         <div class="col-md-12">
-            <span class="meta-category"><a href="<?php echo $link_categoria;?>" class="category-2"><?php echo ($Id_categoria != 1 ? strtolower($Nome_categoria) : ''); ?></a></span>
             <?php  
-                the_title( '<h1 id="titulo_pagina">', '</h1>' );
-                echo '<h4>'.get_nskw_subtitle().'</h4>';
-               
+                the_title( '<h1 id="titulo_pagina">', '</h1>' );               
             ?>
         </div>
 
