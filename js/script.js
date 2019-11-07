@@ -20,6 +20,8 @@ $(function(){
 		$('select#turmas').append('<option disabled selected value="">Selecione</option>');
 		$('select#dia').append('<option disabled selected value="">Selecione</option>');
 		$('select#horario').append('<option disabled selected value="">Selecione</option>');
+		$('select#dia').find('option').hide();
+		$('select#horario').find('option').hide();
 	
 	$('select#turmas').change(function(){
 		
