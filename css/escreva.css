@@ -35,6 +35,13 @@ footer b, footer strong {
   color:#fff;
 }
 
+#pagina_blog > .tipo_3.col-md-9{
+   width:70%;
+}
+
+#pagina_blog > .sidebar.col-md-3{
+   width:30%;
+}
 
 #pagina_namidia .destaque_categorias {
     min-height: 340px;
