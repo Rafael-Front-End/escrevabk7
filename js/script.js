@@ -15,6 +15,56 @@ $(function(){
 	// 	  },'slow');
 	// });
 
+
+	
+		$('select#turmas').append('<option disabled selected value="">Selecione</option>');
+		$('select#dia').append('<option disabled selected value="">Selecione</option>');
+		$('select#horario').append('<option disabled selected value="">Selecione</option>');
+	
+	$('select#turmas').change(function(){
+		
+		$('select#dia').find('option').hide();
+		$('select#horario').find('option').hide();
+		$('select#dia').append('<option disabled selected value="">Selecione</option>');
+		$('select#horario').append('<option disabled selected value="">Selecione</option>');
+
+		switch($(this).val()) {
+		  case "Tijuca":
+		    	$('select#dia').find('option[value="Quinta-Feira"]').show();
+				$('select#horario ').find('option[value="18:00"]').show();
+		    break;
+		  case "Botafogo":
+		    	//Dia
+		    	$('select#dia').find('option[value="Segunda-Feira"]').show();
+		    	$('select#dia').find('option[value="Terça-Feira"]').show();
+		    	$('select#dia').find('option[value="Quarta-Feira"]').show();
+		    	$('select#dia').find('option[value="Quinta-Feira"]').show();
+		    	$('select#dia').find('option[value="Sexta-Feira"]').show();
+		    	//Horario
+				$('select#horario ').find('option[value="18:10 - 19:30"]').show();
+				$('select#horario ').find('option[value="16:10 - 17:30"]').show();
+		    break;
+		     case "Alunos do 5º ao 7º":
+		    	//Dia
+		    	$('select#dia').find('option[value="Sábados"]').show();
+		    	//Horario
+				$('select#horario ').find('option[value="08:30 - 09:45"]').show();
+		    break;
+		    case "Alunos do 8º e 9º":
+		    	//Dia
+		    	$('select#dia').find('option[value="Sábados"]').show();
+		    	//Horario
+				$('select#horario ').find('option[value="10:00 - 11:15"]').show();
+		    break;
+		  	default:
+		   		$('select#dia').find('option').hide();
+				$('select#horario').find('option').hide();
+		}
+
+		
+	});
+
+
     $("#svgContainer").HTMLSVGconnect({
         stroke: "#bc84d7",
         strokeWidth: 5,
