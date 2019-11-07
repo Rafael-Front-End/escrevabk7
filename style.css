@@ -48,9 +48,8 @@ Use it to make something cool, have fun, and share what you've learned with othe
         }
         p { 
             margin: 10px 0;
-          font-size: 12px;
-        
-    line-height: 22px;
+          font-size: 19px;
+            line-height: 26px;
         }
 
         .conteudo_post figure,
@@ -364,7 +363,7 @@ header#pagina_cabecalho h1{
   text-transform: capitalize;
 }
 .meta-category a{
-  font: 400 16px "Open Sans";
+  font: 400 16px 'Arial Regular';
   text-decoration: none;
 }
 
@@ -654,9 +653,11 @@ main#main{
 
 .conteudo_post {
   float: left;
-  font-family: "Open Sans";
-  font-weight: 400;
+  font-family: 'Arial Regular';
   width: 100%;
+  line-height: 26px;
+  color: #555;
+  font: 19px 'Arial Regular' !important;
 }
 
 #texto_post {

@@ -16,7 +16,7 @@
     <?php 
       dynamic_sidebar('topo_pagina_inicial'); 
     ?>
-  <main id="main" class="site-main container" role="main">
+  <main id="main" class="site-main pagina_inicial container" role="main">
 
     <div class="'col-md-12'">
           <?php dynamic_sidebar('pagina_inicial'); ?>

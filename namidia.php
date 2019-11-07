@@ -1,9 +1,9 @@
 <?php
 /**
-Template Name: Blog
+Template Name: Na mídia
 */
  
-
+ 
 get_header();
 while ( have_posts() ) : the_post();
 
@@ -51,19 +51,19 @@ while ( have_posts() ) : the_post();
 
     </header>
     <div class="clearfix"></div>
-    <!-- blog -->
-    <main id="pagina_blog" class="site-main container" role="main">
-        <div class="tipo_3 col-md-12">
+    <!-- Na mídia -->
+    <main id="pagina_namidia" class="site-main container" role="main">
+        <div class="tipo_3">
             <?php 
              $depoimentocat = get_category_by_slug('depoimentos');
-             $namidia = get_category_by_slug('na-midia');
             // Check if there are any posts to display
             $wpb_all_query = new WP_Query(array(
               'post_type'=>'post', 
               'post_status'=>'publish', 
               'posts_per_page'=>10,
               'paged' => get_query_var( 'paged' ),
-              'category__not_in'   => array($depoimentocat->cat_ID, $namidia->cat_ID) 
+              'category_name' => 'na-midia', 
+              'category__not_in'   => array($depoimentocat->cat_ID) 
           ));
             
             if ( $wpb_all_query->have_posts() ) : 
@@ -93,17 +93,26 @@ while ( have_posts() ) : the_post();
                 $autor_link      = get_site_url()."/author/".$autor;
                 $id_post    = $post->ID;
               
+
+                $custom = get_post_custom();
+
+                $link_redirecionamento = NULL;;
+                if(isset($custom['link_redirecionamento'])) {
+                    $link_redirecionamento = $custom['link_redirecionamento'][0];
+                }
+
+
               
                         $html_categoria_cultura .='
+                        <div class="col-md-6">
                 <div class="tipo_1   destaque_categorias">
                         <div class="bloco_post">
-                          <a href="'.$url.'"  class="thumbnail_post" style="background-image:url('.$img.');"><img src="'.$img.'"></a>
-                            <div class="content_post">
-                              <p class="data"><span>'.$data_post.' </span></p>
-                              <a href="'.$url.'" ><h4>'.$titulo.'</h4></a>
-                              <p>'.$resumo.'</p>
-                            </div>
+                          <a href="'.$link_redirecionamento.'" class="bloco_post esquerda">
+                        <div class="thumbnail_post" style="background-image:url('.$img.');"><img src="'.$img.'"></div>
+                        <h4>'.$titulo.'</h4>
+                      </a>
                         </div>
+                </div>
                 </div>
                     ';
              endwhile; 

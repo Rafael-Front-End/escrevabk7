@@ -20,7 +20,7 @@ class posts_recentes extends WP_Widget
         
         global $do_not_duplicate;
         $depoimentocat = get_category_by_slug('depoimentos');
-                
+        $namidia = get_category_by_slug('na-midia');
         $quantidade = (!empty($instance['quantidade']) ? $instance['quantidade'] : 1);
         $design = $instance['design'];
 
@@ -30,7 +30,7 @@ class posts_recentes extends WP_Widget
                 'showposts' => $quantidade,  
                 'category_name' => $categoria, 
                 'post__not_in'   => $do_not_duplicate,
-                'category__not_in'   => array($depoimentocat->cat_ID)
+                'category__not_in'   => array($depoimentocat->cat_ID, $namidia->cat_ID)
         );
         if(empty($instance['categoria']) || ($instance['categoria'] == 'todas-categorias'))
           unset($query_args['category_name']); 
