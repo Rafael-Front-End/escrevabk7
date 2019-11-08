@@ -11,12 +11,32 @@ $(function(){
 	// 	},
 	// 	function() {
 	// 	  $(this).find('.blocove').stop().animate({
-	// 	     width: 0
+	// 	     width: 0 
 	// 	  },'slow');
 	// });
 
 
-	
+	$("#svgContainer").HTMLSVGconnect({
+        stroke: "#bc84d7",
+        strokeWidth: 5,
+        orientation: "auto",
+        paths: [
+          { start: "#diagrama_metodologia_1", end: "#diagrama_metodologia_2", },
+          { start: "#diagrama_metodologia_2", end: "#diagrama_metodologia_3", }
+        ]
+  	}); 
+
+  	$("#svgContainer2").HTMLSVGconnect({
+        stroke: "#bc84d7",
+        strokeWidth: 5,
+        orientation: "auto",
+        paths: [
+          { start: "#diagrama_metodologia_4", end: "#diagrama_metodologia_5", },
+          { start: "#diagrama_metodologia_5", end: "#diagrama_metodologia_6", }
+        ]
+  	}); 
+
+
 		$('select#turmas').append('<option disabled selected value="">Selecione</option>');
 		$('select#dia').append('<option disabled selected value="">Selecione</option>');
 		$('select#horario').append('<option disabled selected value="">Selecione</option>');
@@ -82,16 +102,7 @@ $(function(){
 	    }
 	});
 
-    $("#svgContainer").HTMLSVGconnect({
-        stroke: "#bc84d7",
-        strokeWidth: 5,
-        orientation: "auto",
-        paths: [
-          { start: "#diagrama_metodologia_1", end: "#diagrama_metodologia_2", },
-          { start: "#diagrama_metodologia_2", end: "#diagrama_metodologia_3", }
-        ]
-      }); 
-
+    
 	    //For Firefox we have to handle it in JavaScript 
 		var vids = $("video"); 
 		$.each(vids, function(){

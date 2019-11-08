@@ -107,6 +107,7 @@
     <?php  
       wp_head(); 
     ?>
+    
    
     <script type="text/javascript" src="<?php bloginfo( 'template_directory' ); ?>/js/jquery-1.11.1.min.js" language="javascript"></script>        
     <script type="text/javascript" src="<?php bloginfo( 'template_directory' ); ?>/js/bootstrap.min.js" language="javascript"></script>

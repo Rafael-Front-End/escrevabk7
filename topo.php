@@ -24,9 +24,9 @@
     <!-- Static navbar -->
     <div id="social_icons_top" class="pull-left"> 
           <div class="container">
-            <div class="col-md-4">  
+            <div class="col-md-4 col-xs-12">  
             </div>
-            <div class="col-md-8">
+            <div class="col-md-8 col-xs-12">
               <a class="botaoazul rocho" href='http://testes.zflag.net/redacao-para-ensino-fundamental/'>Redação para Ensino Fundamental</a>
               <a class="botaoazul" href='http://testes.zflag.net/redacao-para-vestibulares/'>Redação para Vestibulares</a>
               <ul >
@@ -88,7 +88,7 @@
                   ?>
                 </a>
               </li>
-              <?php echo $html_li_menu_1; ?>
+              <?php echo $html_li_menu_3; ?>
             </ul>
 
           </div><!--/.nav-collapse -->

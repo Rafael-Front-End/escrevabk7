@@ -69,34 +69,62 @@ while ( have_posts() ) : the_post();
 
                 <div id="texto_post">
                     <?php  the_content(); ?>
-                </div>
-                
-                <div id='inner_post_widget'> <?php dynamic_sidebar('inner_post_widget'); ?></div>
-                
-                <!-- div id="svgContainer"></div>
+                   
+                    <div style='float:left; width:100%;'>
+                        <div id="svgContainer"></div>
+                        <div id='inner_post_widget'> <?php dynamic_sidebar('inner_post_widget'); ?></div>
+                        
 
-                <div  class="diagrama_metodologia">
-                    <div id="diagrama_metodologia_1" class="ibagem">
+                        <div  class="diagrama_metodologia">
+                            <div id="diagrama_metodologia_1" style="background-image: url('<?php bloginfo( 'template_directory' ); ?>/imagens/icons/ico1.jpg')" class="ibagem">
+                            </div>
+                            <p>
+                                Aulas com técnicas de redação para vestibulares;
+                            </p>
+                        </div>
+                        <div  class="diagrama_metodologia">
+                            <div id="diagrama_metodologia_2" style="background-image: url('<?php bloginfo( 'template_directory' ); ?>/imagens/icons/ico2.jpg')" class="ibagem">
+                            </div>
+                            <p>
+                                aulas interdisciplinares, com Geografia, História, Psicologia, Direito, Sociologia, Filosofia, entre outros;
+                            </p>
+                        </div>
+                        <div  class="diagrama_metodologia">
+                            <div id="diagrama_metodologia_3" style="background-image: url('<?php bloginfo( 'template_directory' ); ?>/imagens/icons/ico3.jpg')" class="ibagem">
+                            </div>
+                            <p>
+                                debates sobre temas atuais;
+                            </p>
+                        </div>
                     </div>
-                    <p>
-                        Aulas com interpretação textual e gramática;
-                    </p>
-                </div>
-                <div  class="diagrama_metodologia">
-                    <div id="diagrama_metodologia_2" class="ibagem">
-                    </div>
-                    <p>
-                        Aulas com técnicas de redação segundo demanda das escolas, bem como concursos para instituições públicas, como o Colégio Militar e Colégio Pedro II;
-                    </p>
-                </div>
-                <div  class="diagrama_metodologia">
-                    <div id="diagrama_metodologia_3" class="ibagem">
-                    </div>
-                    <p>
-                        Debates sobre temas atuais;
-                    </p>
-                </div -->
+                    <div style='float:left; width:100%;'>
+                        <div id="svgContainer2"></div>
+                        <div id='inner_post_widget'> <?php dynamic_sidebar('inner_post_widget'); ?></div>
+                        
 
+                        <div  class="diagrama_metodologia">
+                            <div id="diagrama_metodologia_4" style="background-image: url('<?php bloginfo( 'template_directory' ); ?>/imagens/icons/ico4.jpg')" class="ibagem">
+                            </div>
+                            <p>
+                                atendimento individual mediante agendamento;
+                            </p>
+                        </div>
+                        <div  class="diagrama_metodologia">
+                            <div id="diagrama_metodologia_5" style="background-image: url('<?php bloginfo( 'template_directory' ); ?>/imagens/icons/ico5.jpg')" class="ibagem">
+                            </div>
+                            <p>
+                                simulados corrigidos por profissionais capacitados segundo os critérios de avaliação dos principais vestibulares;
+                            </p>
+                        </div>
+                        <div  class="diagrama_metodologia">
+                            <div id="diagrama_metodologia_6" style="background-image: url('<?php bloginfo( 'template_directory' ); ?>/imagens/icons/ico6.jpg')" class="ibagem">
+                            </div>
+                            <p>
+                                material para as aulas.
+                            </p>
+                        </div>
+                    </div>
+                </div>
             </section>
         </div>
         <?php get_sidebar(); ?>

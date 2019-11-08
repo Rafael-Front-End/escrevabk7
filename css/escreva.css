@@ -4,7 +4,7 @@ h1, h2, h3{
     color: #000;
     font-family: Montserrat Bold;
     line-height: 37px;
-    font-weight: bold;
+    font-weight: bold; 
     margin-bottom: 20px;
 }
 
@@ -34,6 +34,14 @@ b, strong {
 footer b, footer strong {
   color:#fff;
 }
+
+
+#svgContainer2,
+#svgContainer {
+      z-index: -10;
+      position: absolute;
+}
+
 
 #pagina_blog > .tipo_3.col-md-9{
    width:70%;
@@ -197,14 +205,16 @@ footer b, footer strong {
 
 .diagrama_metodologia{
   float: left;
-  width: 40%;
+  width: 35%;
 }
 .diagrama_metodologia p{
-  text-align: center;
-  font-size: 18px;
-  font-family: Arial Regular;
-  font-weight: initial;
-  color:#555;
+text-align: center;
+    font-size: 12px;
+    font-family: Arial Regular;
+    font-weight: initial;
+    color: #555;
+    line-height: 14px;
+    padding: 0 20px;
 }
 
 .diagrama_metodologia .ibagem{
@@ -214,6 +224,9 @@ footer b, footer strong {
   margin: 0 auto;
   text-align: center;
   height: 150px;
+    background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center top;
 } 
 
 .diagrama_metodologia:first-child,
@@ -1162,6 +1175,28 @@ span.wpcf7-list-item {
 /*=====================================*/
 
 @media (max-width: 768px){
+  
+  /*=============== Topo ======================*/
+
+
+  #menu_topo.navbar-default{
+      float: left;
+      width: 100%;
+      height: auto;
+      background: #fff;
+  } 
+
+  #menu_topo .span, #social_icons_top ul, #social_icons_top a {
+      margin: 5px;
+      text-align: center;
+
+  }
+
+  #menu_topo.navbar-default .navbar-nav > li > a {
+    color: #000;
+  }
+
+
 
   .desktop{
     display: none !important;

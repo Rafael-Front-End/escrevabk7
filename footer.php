@@ -40,7 +40,7 @@
 
 
     <script type="text/javascript" language="javascript"></script>
-    
+     
     <script type="text/javascript" src="<?php bloginfo( 'template_directory' ); ?>/js/jquery.html-svg-connect.js" language="javascript"></script>
 
     <script type="text/javascript" src="<?php bloginfo( 'template_directory' ); ?>/js/jquery-cover-master/jquery.cover.js" language="javascript"></script>
