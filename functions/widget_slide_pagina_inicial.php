@@ -78,16 +78,20 @@ class slide_pagina_inicial extends WP_Widget
 
             $html_destaques .= " 
                   <div class=\"container mobile\" style='background-image:url(\"{$imagem}\");'>
-                  <div class=\"background_txt_thumb\"></div>
                   ";
 
+
                     $html_destaques .= " 
-                       <div class='lado-texto'>
+                       <div class='lado-texto ".($img_align == 'Direita' ? 'direita' : '')." '>
                         <h1>{$titulo}</h1>
+                        {$lado_imagem}
                         <p>{$texto}</p>
-                        <a href='".$link."' class='btn'>VER MAIS</a>
+                         <div class='botaonoslidedahomeolocoqueclassegrande'><a href='".$link."' class='btn'>VER MAIS</a></div>
                       </div>
-                      ";
+                      ";                       
+                      
+                    
+                      
 
             $html_destaques .= "
                   </div>";

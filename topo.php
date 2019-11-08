@@ -40,16 +40,7 @@
     <nav id="menu_topo" class="col-md-12 navbar navbar-default navbar-static-top">
         
       <div class="container">
-        <div class="navbar-header">
-
-            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
-              <span class="sr-only">Alternar navegação</span>
-              <span class="icon-bar top-bar"></span>
-              <span class="icon-bar middle-bar"></span>
-              <span class="icon-bar bottom-bar"></span>
-            </button>
-
-        </div>
+        
         <div class="top-menu-content">
           <a  href="<?php echo esc_url( home_url( '/' ) ); ?>">
           <?php
@@ -60,41 +51,35 @@
             }
           ?>
           </a>
+          <div class="navbar-header">
+
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+              <span class="sr-only">Alternar navegação</span>
+              <span class="icon-bar top-bar"></span>
+              <span class="icon-bar middle-bar"></span>
+              <span class="icon-bar bottom-bar"></span>
+            </button>
+
+        </div>
 
           <?php
               wp_nav_menu(array(
-                  'menu'              => 'menu_2',
+                  'menu'              => 'menu_3',
                   'theme_location'    => 'primary',
                   'depth'             => 2,
                   'container'         => 'div',
                   'container_class'   => 'collapse navbar-collapse',
-                  'container_id'      => 'navbar2',
+                  'container_id'      => 'navbar',
                   'menu_class'        => 'nav navbar-nav',
                   'fallback_cb'       => 'wp_bootstrap_navwalker::fallback',
                   'walker'            => new wp_bootstrap_navwalker())
               );
           ?>  
           
-          <div id="navbar" class="navbar-collapse collapse">
-            <ul class="nav navbar-nav">
-              <li id="logo-menu" >
-                <a  href="<?php echo esc_url( home_url( '/' ) ); ?>">
-                  <?php
-                    if(get_header_image()){
-                        echo "<img class=\"img-responsive\" alt='".( get_bloginfo( 'title' ) )."' src=\"".get_header_image()."\">";
-                    }else{
-                      echo "<h1 class='logotxt'>".get_bloginfo( 'title' )."</h1>";
-                    }
-                  ?>
-                </a>
-              </li>
-              <?php echo $html_li_menu_3; ?>
-            </ul>
-
-          </div><!--/.nav-collapse -->
+          
         </div>
           
-        <ul id='menu_3' class="">
+        <ul id='menu_3' class="desktop">
           <?php echo $html_li_menu_3; ?>
         </ul>
 

@@ -157,6 +157,7 @@ class posts_recentes extends WP_Widget
         <div class=\"".$tipo_layout." destaque_categorias\">
             $titulo_plugin_html 
             $html_categoria_cultura
+            <div class='clearfix'></div>
             <div class='col-md-12'><a class='todososposts btn' href='".get_permalink( get_page_by_path( 'blog' ) )."'>VER TODOS OS POSTS</a></div>
         </div>
         ";

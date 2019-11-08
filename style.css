@@ -2411,7 +2411,6 @@ footer .social-link-info a.color-youtube:hover{color:#b00}
 
   footer#rodape section.copyright {
     float: left;
-    margin-top: 30px;
     text-align: center;
     width: 100%;
   }
@@ -2911,12 +2910,6 @@ footer .social-link-info a.color-youtube:hover{color:#b00}
 
 }
 
-
-
-.adsbygoogle { display:inline-block; width: 320px; height: 50px; }
-@media (max-width: 400px) { .adsbygoogle { display: none !important; } }
-@media (min-width:500px) { .adsbygoogle { width: 468px !important; height: 60px; } }
-@media (min-width:800px) { .adsbygoogle { width: 728px !important; height: 90px; } }
 
 
 /* ===================== END ecommerce END =============================== */  

@@ -1197,6 +1197,101 @@ span.wpcf7-list-item {
   }
 
 
+  #myCarousel .lado-texto img {
+          width: 60%;
+    text-align: center;
+  }
+
+  .lado-texto {
+    width: 100%;
+    float: left;
+    padding: 20px;
+  }
+
+  .lado-texto h1 {
+    letter-spacing: -1px;
+    font-size: 22px !important;
+    line-height: 28px !important;
+  }
+
+
+  .slide_home .lado-texto p {
+      font-size: 17px;
+      line-height: 18px;
+      margin: 10px 0;
+  }
+
+
+  #pagina_portfolio .photo {
+    float: left;
+    width: 100%;
+}
+  
+
+  .fundoddepoimento {
+    padding: 26px 15px;
+  }
+
+  .depoimentos_recentes, .testimonial {
+    width: 100% !important;
+  }
+
+  .depoimentos_recentes .thumbnail_post, .testimonial-image {
+      width: 200px;
+      height: 200px;
+      float: none;
+      margin: 0 auto;
+   }
+   .barramidia {
+      text-align: center;
+   }
+   .barramidia img{
+      margin: 15px;
+    }
+
+    footer#rodape .widget_nav_menu, footer#rodape .textwidget {
+        float: left;
+        width: 100%;
+        padding: 0;
+        margin: 0;
+        padding-right: 15px;
+        font-size: 14px;
+
+          background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center top;
+    }
+
+  header#pagina_cabecalho h1 {
+      line-height: 47px;
+      font-size: 34px;
+      text-align: left;
+  }
+
+  header#pagina_cabecalho.page_width {
+    padding: 15px;
+  }
+
+  .diagrama_metodologia {
+      width: 100%;
+  }
+
+  .destaque_categorias.tipo_2 > .bloco_post > .thumbnail_post {
+    max-width: 100%;
+  }
+
+
+  .destaque_categorias.tipo_2 > .bloco_post > .content_post {
+    width: 100%;
+  }
+
+  .destaque_categorias.tipo_2 > .bloco_post > .content_post p {
+    margin: 0;
+  }
+  .destaque_categorias.tipo_2 > .bloco_post > .content_post h4 {
+      font-size: 14px;
+      margin-top: 20px;
+  }
 
   .desktop{
     display: none !important;
