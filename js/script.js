@@ -43,8 +43,8 @@ $(function(){
 		    	$('select#dia').find('option[value="Quinta-Feira"]').show();
 		    	$('select#dia').find('option[value="Sexta-Feira"]').show();
 		    	//Horario
-				$('select#horario ').find('option[value="18:10 - 19:30"]').show();
 				$('select#horario ').find('option[value="16:10 - 17:30"]').show();
+				$('select#horario ').find('option[value="18:10 - 19:30"]').show();
 		    break;
 		     case "Alunos do 5º ao 7º":
 		    	//Dia
@@ -66,6 +66,21 @@ $(function(){
 		
 	});
 
+
+	$('select#dia').change(function(){
+		$('select#horario').find('option').hide();
+		$('select#horario').append('<option disabled selected value="">Selecione</option>');
+		switch($(this).val()) {
+		  	case "Quinta-Feira":
+		    	$('select#horario ').find('option[value="16:10 - 17:30"]').show();
+	    	break;
+	    	case "Sexta-Feira":
+		    	$('select#horario ').find('option[value="16:10 - 17:30"]').show();
+	    	break;
+	    	default:
+	    		$('select#horario ').find('option[value="18:10 - 19:30"]').show();
+	    }
+	});
 
     $("#svgContainer").HTMLSVGconnect({
         stroke: "#bc84d7",
