@@ -653,11 +653,11 @@ main#main{
 
 .conteudo_post {
   float: left;
-  font-family: 'Arial Regular';
+  font-family: Arial;
   width: 100%;
   line-height: 26px;
   color: #555;
-  font: 19px 'Arial Regular' !important;
+  font: 19px Arial !important;
 }
 
 #texto_post {

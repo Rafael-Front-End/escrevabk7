@@ -144,7 +144,7 @@ footer b, footer strong {
 }
 
 #pagina_blog .destaque_categorias.tipo_1 > .bloco_post h4 {
-  font:22px Arial Bold;
+  font:22px Arial;
   color:#000;
 }
 
@@ -169,11 +169,11 @@ footer b, footer strong {
   float: left;
   color: #555;
   width: 100%;
-  font: bold 19px Arial bold;
+  font: bold 19px Arial;
 }
 
 .pagina_depoimento .notas h5{
-  font:Bold 14px Arial Bold;
+  font:Bold 14px Arial;
   color:#000;
 }
 
@@ -412,7 +412,7 @@ main {
 
 #social_icons_top{
 	font-size:11px;
-	font-family: Arial Bold, Arial;
+	font-family: Arial;
 	font-weight: Bold;
 	width: 100%;
 	background: #000;
@@ -432,7 +432,7 @@ main {
 
 #social_icons_top span {
     
-    font-family: Arial Bold;
+    font-family: Arial;
     font-size: 12px;
 }
 
@@ -511,7 +511,7 @@ input[type=submit],
     margin-left: 6px;
     color: #000 !important;
     text-decoration: none !important;
-    font-family: Arial Bold;
+    font-family: Arial;
     float: right;
 }
 
@@ -528,7 +528,7 @@ input[type=submit],
 #menu_3 li > a {
 	padding: 8px 14px;
     color: #000;
-    font-family: Arial Bold, Arial !important;
+    font-family: Arial !important;
     font-size: 11px;
     font-style: normal;
     font-weight: Bold;
@@ -797,7 +797,7 @@ h3.testimonialstitulo,
 .tipo_4 > .bloco_post h4{
 	font-size: 18px;
     font-weight: bold;
-    font-family: Arial Bold;
+    font-family: Arial;
     color:#000;
     text-align: left;
     margin: 8px 0;
@@ -836,7 +836,7 @@ h3.testimonialstitulo,
     font-size: 14px;
     letter-spacing: 2px;
     font-weight: bold;
-    font-family: Arial Bold;
+    font-family: Arial;
     background-color: #f98644;
     color: #fff;
     border-radius: 30px;
@@ -1001,7 +1001,7 @@ header#pagina_cabecalho.page_width {
 .testimonial h3,
 h3.testimonial-heading a,
 h3.testimonial-heading{
-  font:Bold 19px Arial Bold !important;
+  font:Bold 19px Arial !important;
   color:#424241 !important;
   text-align: left;
 }
@@ -1100,7 +1100,7 @@ footer#rodape .textwidget h3,
 .rodape1 h3 span,
 .rodape1 h3,
 footer h2{
-	font-family: Arial Bold;
+	font-family: Arial;
 	font-weight: bold;
 	font-size: 18px;
 	color: #f47d3a;
@@ -1109,7 +1109,7 @@ footer h2{
 
 
 footer .menu li a{
-	font-family: Arial Bold;
+	font-family: Arial;
 	font-weight: bold;
 	font-size: 14px;
 	color: #fff;
@@ -1144,7 +1144,7 @@ footer ul li::before {
   border-radius: 20px;
   border-color: #000;
   color: #000;
-  font:Bold 10px Arial Bold;
+  font:Bold 10px Arial;
   background: none;
   float: none;
   text-align: center;
