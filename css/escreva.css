@@ -36,6 +36,11 @@ footer b, footer strong {
 }
 
 
+span.wpcf7-list-item-label::before, span.wpcf7-list-item-label::after {
+    content: " ";
+    margin-left: 10px;
+}
+
 #svgContainer2,
 #svgContainer {
       z-index: -10;
@@ -1175,9 +1180,87 @@ span.wpcf7-list-item {
 /*=====================================*/
 
 @media (max-width: 768px){
-  
-  /*=============== Topo ======================*/
+  #pagina_contato h3 {
+    float: left;
+  }
 
+  #pagina_blog > .sidebar.col-md-3 {
+    width: 100%;
+  }
+
+  .destaque_categorias.tipo_1 > .bloco_post > .thumbnail_post {
+    float: none;
+    text-align: center;
+    width: 170px !important;
+    height: 170px !important;
+    display: block;
+    margin: 0 auto;
+  }
+
+  .notas{
+    max-width: 100%;
+    margin:0;
+  }
+
+  .notas,
+  #pagina_blog > .tipo_3.col-md-9 {
+    width: 100%;
+  }
+
+  #portfolio .photo {
+    width: 50%;
+  }
+
+  span.wpcf7-list-item {
+    width: 100%;
+  }
+
+
+  .notas, .pagina_depoimento .notas h3,
+  #pagina_blog .bloco_post > .content_post,
+  .botaonoslidedahomeolocoqueclassegrande, 
+  header#pagina_cabecalho h1,
+  .slide_home .lado-texto p, .slide_home .lado-texto {
+  
+    text-align: center;
+  }
+
+  .slide_home .seta_dir,
+  .slide_home .seta_esq {
+    top: 90%;
+  }
+
+
+  .slide_home .seta_dir {
+    margin-left: -15px !important;
+  }
+  .slide_home .seta_esq {
+    margin-left: -10px !important;
+  }
+
+  #pagina_blog .bloco_post > .content_post {
+    width: 100%;
+    padding: 0 !important;
+  }
+
+  #pagina_blog .destaque_categorias.tipo_1 > .bloco_post > .thumbnail_post {
+    max-width: 100%;
+  }
+
+  #pagina_namidia, #pagina_blog {
+    padding: 50px 15px;
+    width: 100%;
+    float: left;
+  }
+
+  #svgContainer2,
+  #svgContainer {
+    display: none;
+  }
+
+  .diagrama_metodologia{
+    width: 100% !important;
+  }
 
   #menu_topo.navbar-default{
       float: left;
@@ -1317,4 +1400,4 @@ span.wpcf7-list-item {
   }
 
 
-}
+} 
