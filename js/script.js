@@ -42,6 +42,8 @@ $(function(){
 		$('select#horario').append('<option disabled selected value="">Selecione</option>');
 		$('select#dia').find('option').hide();
 		$('select#horario').find('option').hide();
+
+	
 	
 	$('select#turmas').change(function(){
 		
@@ -85,6 +87,18 @@ $(function(){
 
 		
 	});
+
+	$('#dia').on('click', function(){
+		if($('select#turmas').val() == null)
+			alert("Selecione uma turma primeiro para o sistema carregar os dias e horários");
+	});
+
+	$('#horario').on('click', function(){
+		if($('select#turmas').val() == null)
+			alert("Selecione uma turma primeiro para o sistema carregar os dias e horários");
+	});
+
+
 
 
 	$('select#dia').change(function(){

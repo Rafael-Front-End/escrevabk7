@@ -351,6 +351,11 @@ main {
     text-align: left;
 }
 
+.pagina_usuario_depoimento .bloco_post > .content_post{
+  width: 100% !important;
+  margin-top: 30px;
+} 
+
 #pagina_blog .bloco_post > .content_post {
     padding-left: 30px;
 }
