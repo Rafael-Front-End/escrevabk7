@@ -48,7 +48,7 @@ class ZflagGaleriaHome extends WP_Widget
                                 <img src="'.get_bloginfo( 'template_directory' ).'/imagens/icons/iconportfolio1.png">
                                 <h3>Debates sobre temas atuais
 </h3>
-                                <p>As discussões sobre atualidades despertam no estudante a capacidade de reflexão e de argumentação, algo fundamental para produzir um texto, de modo eficiente e aprofundado.</p>
+                                <p>As discussões sobre atualidades despertam no estudante a capacidade de reflexão e de argumentação, algo fundamental para produzir um texto de modo eficiente e aprofundado.</p>
                               </div>
                           </div>';
                 }else  if($cont == 1){
@@ -56,7 +56,7 @@ class ZflagGaleriaHome extends WP_Widget
                               <div class="centervertical">
                               <img src="'.get_bloginfo( 'template_directory' ).'/imagens/icons/icone2.png">
                               <h3>Grupos de até 15 alunos</h3>
-                              <p>O trabalho em grupos pequenos, com até 15 alunos, torna as aulas personalizadas fugindo dos modelos ou fórmulas “prontas”.</p>
+                              <p>O trabalho em grupos pequenos, com até 15 alunos, torna as aulas personalizadas fugindo dos modelos ou “fórmulas prontas”.</p>
                           </div>
                           </div>';
                 }else  {

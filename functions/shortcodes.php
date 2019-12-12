@@ -353,7 +353,7 @@ function zflag_galeria($atts){
                       <div class="photo '.$slug.'">
                         <div class="single-awesome-project">
                           <div class="awesome-img">
-                            <a class="venobox" href="'.$img.'"><img width="100%" height="auto" src="'.$thumbnail[0].'" alt="" /></a>
+                            <a class="venobox" data-gall="myGallery"  href="'.$img.'"><img width="100%" height="auto" src="'.$thumbnail[0].'" alt="" /></a>
                             <div class="add-actions text-center">
                               
                             </div>

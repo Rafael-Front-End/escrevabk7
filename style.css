@@ -579,7 +579,6 @@ nav#menu_topo ul.navbar-nav > li > a > img {
 section#post_thumbnail {
   float: left;
   margin-top: 10px;
-  max-height: 233px;
   overflow: hidden;
   width: 100%;
 }

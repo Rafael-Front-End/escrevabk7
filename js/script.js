@@ -160,7 +160,15 @@ $(function(){
     Venobox
   --------------------- */
   var veno_box = $('.venobox') ;
-  veno_box.venobox();
+  veno_box.venobox({
+        framewidth: '60%',        // default: ''
+        frameheight: '60%',       // default: ''
+        border: '0px',             // default: '0'
+        bgcolor: '#5dff5e',         // default: '#fff'
+        titleattr: 'data-title',    // default: 'title'
+        numeratio: true,            // default: false
+        infinigall: true
+    });
 
   
 	$('#botao_pesquisa.fa-search').on('click', function(){
