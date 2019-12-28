@@ -38,85 +38,39 @@ $(function(){
 
 
 		$('select#turmas').append('<option disabled selected value="">Selecione</option>');
-		$('select#dia').append('<option disabled selected value="">Selecione</option>');
-		$('select#horario').append('<option disabled selected value="">Selecione</option>');
-		$('select#dia').find('option').hide();
-		$('select#horario').find('option').hide();
+		$('select#curso').append('<option disabled selected value="">Selecione</option>');
+		$('select#curso').find('option').hide();
 
 	
 	
 	$('select#turmas').change(function(){
 		
-		$('select#dia').find('option').hide();
-		$('select#horario').find('option').hide();
-		$('select#dia').append('<option disabled selected value="">Selecione</option>');
-		$('select#horario').append('<option disabled selected value="">Selecione</option>');
+		$('select#curso').find('option').hide();
+		$('select#curso').append('<option disabled selected value="">Selecione</option>');
 
 		switch($(this).val()) {
 		  case "Tijuca":
-		    	$('select#dia').find('option[value="Quinta-Feira"]').show();
-				$('select#horario ').find('option[value="18:00"]').show();
+		    	$('select#curso').find('option[value="Grupos para Vestibulares"]').show();
+				$('select#curso ').find('option[value="Grupos para Ensino Fundamental"]').show();
 		    break;
 		  case "Botafogo":
-		    	//Dia
-		    	$('select#dia').find('option[value="Segunda-Feira"]').show();
-		    	$('select#dia').find('option[value="Terça-Feira"]').show();
-		    	$('select#dia').find('option[value="Quarta-Feira"]').show();
-		    	$('select#dia').find('option[value="Quinta-Feira"]').show();
-		    	$('select#dia').find('option[value="Sexta-Feira"]').show();
-		    	//Horario
-				$('select#horario ').find('option[value="16:10 - 17:30"]').show();
-				$('select#horario ').find('option[value="18:10 - 19:30"]').show();
+		    	//curso
+		    	$('select#curso').find('option[value="Grupos para Vestibulares"]').show();
 		    break;
-		     case "Alunos do 5º ao 7º":
-		    	//Dia
-		    	$('select#dia').find('option[value="Sábados"]').show();
-		    	//Horario
-				$('select#horario ').find('option[value="08:30 - 09:45"]').show();
-		    break;
-		    case "Alunos do 8º e 9º":
-		    	//Dia
-		    	$('select#dia').find('option[value="Sábados"]').show();
-		    	//Horario
-				$('select#horario ').find('option[value="10:00 - 11:15"]').show();
-		    break;
+		     
 		  	default:
-		   		$('select#dia').find('option').hide();
-				$('select#horario').find('option').hide();
+		   		$('select#curso').find('option').hide();
 		}
 
 		
 	});
 
-	$('#dia').on('click', function(){
+	$('#curso').on('click', function(){
 		if($('select#turmas').val() == null)
-			alert("Selecione uma turma primeiro para o sistema carregar os dias e horários");
+			alert("Selecione um local primeiro para o sistema carregar os cursos");
 	});
 
-	$('#horario').on('click', function(){
-		if($('select#turmas').val() == null)
-			alert("Selecione uma turma primeiro para o sistema carregar os dias e horários");
-	});
-
-
-
-
-	$('select#dia').change(function(){
-		$('select#horario').find('option').hide();
-		$('select#horario').append('<option disabled selected value="">Selecione</option>');
-		switch($(this).val()) {
-		  	case "Quinta-Feira":
-		    	$('select#horario ').find('option[value="16:10 - 17:30"]').show();
-	    	break;
-	    	case "Sexta-Feira":
-		    	$('select#horario ').find('option[value="16:10 - 17:30"]').show();
-	    	break;
-	    	default:
-	    		$('select#horario ').find('option[value="18:10 - 19:30"]').show();
-	    }
-	});
-
-    
+	    
 	    //For Firefox we have to handle it in JavaScript 
 		var vids = $("video"); 
 		$.each(vids, function(){

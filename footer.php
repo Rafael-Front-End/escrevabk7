@@ -11,8 +11,8 @@
         <h3><a href="<?php echo get_page_link( get_page_by_path( 'na-midia' ) ); ?>">Estamos na mídia</a></h3>
         <div class="col-md-3"> <img src='<?php bloginfo( 'template_directory' ); ?>/imagens/logos/globo.png'> </div>
         <div class="col-md-3"> <img src='<?php bloginfo( 'template_directory' ); ?>/imagens/logos/infomoney.png'> </div>
-        <div class="col-md-3"> <img src='<?php bloginfo( 'template_directory' ); ?>/imagens/logos/terra.png'> </div>
-        <div class="col-md-3"> <img src='<?php bloginfo( 'template_directory' ); ?>/imagens/logos/mundo_marketing.png'> </div>
+        <div class="col-md-3"> <img src='<?php bloginfo( 'template_directory' ); ?>/imagens/logos/logo-exame-logo.png'> </div>
+        <div class="col-md-3"> <img src='<?php bloginfo( 'template_directory' ); ?>/imagens/logos/logo-o-globo-logo-11.png'> </div>
     </div>
 		<footer class="row" id="rodape"> 
 			  <div style='' class="rodape1">

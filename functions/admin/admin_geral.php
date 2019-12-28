@@ -12,6 +12,10 @@
 			require('galeria.php');
 		}else if($_GET['subpage'] == 'galeria_home'){
 			require('galeria_home.php');
+		}else if($_GET['subpage'] == 'google'){
+			require('google.php');
+		}else if($_GET['subpage'] == 'head_config'){
+			require('head_config.php');
 		}
 	}else{
 		$html = '<h2 style="text-align:center;">Nada aqui</h2>';
@@ -43,6 +47,12 @@
 			
 	        <nav id="menu" class="sidebar-nav col-md-3">
 				<ul class="nav">
+					<li class="nav-item"> 
+					            <a class="collapse-item ajax_send" data-subpage="head_config" data-acao="editar"  href="?page=zflag_theme_admin_geral&subpage=head_config&acao=editar">Head/scripts</a>
+					</li>
+					<li class="nav-item"> 
+					            <a class="collapse-item ajax_send" data-subpage="google" data-acao="editar"  href="?page=zflag_theme_admin_geral&subpage=google&acao=editar">Google</a>
+					</li>
 					<li class="nav-item"> 
 						<a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapsePages" aria-expanded="false" aria-controls="collapsePages">
 				          	<i class="glyphicon glyphicon-chevron-right"></i>
