@@ -140,7 +140,12 @@
     <link href="<?php bloginfo( 'template_directory' ); ?>/css/escreva.css" type="text/css" media="all" rel="stylesheet" />
     <link rel="shortcut icon" type="image/x-icon" href="<?php bloginfo('template_directory')?>/imagens/fav32x32.png" />
     
+     <?php echo !empty($tema_zflag_google['tag_v_analytics']) ? $tema_zflag_google['tag_v_analytics'] : ''; ?>
 
+    <?php  echo !empty($tema_zflag_google['tag_v_adsense']) ? $tema_zflag_google['tag_v_adsense'] : ''; ?>
+    
+    <?php  echo !empty($tema_zflag_head['head_html']) ? $tema_zflag_head['head_html'] : ''; ?>
+    
       
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
