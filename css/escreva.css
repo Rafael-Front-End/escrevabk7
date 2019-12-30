@@ -35,6 +35,11 @@ footer b, footer strong {
   color:#fff;
 }
 
+div.wpcf7-response-output {
+    float: left;
+    width: 100%;
+}
+
 
 span.wpcf7-list-item-label::before, span.wpcf7-list-item-label::after {
     content: " ";
